@@ -1,0 +1,51 @@
+body {
+  background-color: #f8f9fa;
+  font-family: "Nanum Gothic Coding", monospace;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.login header {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.login header img {
+  margin-right: 2rem;
+}
+
+.login header p {
+  font-size: 2.5rem;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20vh;
+  width: 30vw;
+}
+
+input {
+  box-sizing: border-box;
+  height: 2rem;
+}
+
+form input {
+  padding: 0.7rem;
+}
+
+form button {
+  background-color: #08a600;
+  height: 2rem;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
