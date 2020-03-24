@@ -31,6 +31,7 @@ form {
   justify-content: space-between;
   height: 20vh;
   width: 30vw;
+  margin-bottom: 2rem;
 }
 
 input {
@@ -42,10 +43,16 @@ form input {
   padding: 0.7rem;
 }
 
-form button {
+button {
   background-color: #08a600;
   height: 2rem;
   color: #ffffff;
   font-size: 0.8rem;
   font-weight: 700;
+}
+
+.register-button {
+  width: 30vw;
+  background-color: #0175d6;
+  color: #ffffff;
 }
