@@ -113,7 +113,7 @@ form span {
 }
 
 #modal {
-  position: absolute;
+  position: fixed;
   border: 1px solid #000000;
   background-color: #f4f4f4;
   top: 0;
