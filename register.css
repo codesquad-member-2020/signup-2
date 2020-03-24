@@ -1,0 +1,103 @@
+body {
+  background-color: #f8f9fa;
+}
+#register {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  color: #03cf5d;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 3rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#buttons > button {
+  width: 48%;
+  height: 3rem;
+  background-color: #08a600;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+label {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+#birthday {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+input,
+select {
+  box-sizing: border-box;
+  height: 1.8rem;
+}
+
+input {
+  padding: 0.7rem;
+}
+
+#birthday select {
+  width: 30%;
+}
+
+#birthday input {
+  max-width: 30%;
+}
+
+.warning,
+.safe {
+  font-size: 0.9rem;
+}
+
+.warning {
+  color: #fd3434;
+}
+
+.safe {
+  color: #45bb43;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+span {
+  display: block;
+}
+
+div span {
+  margin-top: 0.4rem;
+}
+
+#agreement {
+  display: flex;
+  flex-direction: row;
+}

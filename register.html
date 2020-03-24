@@ -3,75 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="register.css" />
     <title>회원 가입</title>
   </head>
   <body>
-    <header>
-      회원가입
-    </header>
-    <form>
-      <div>
-        <label for="id">아이디</label>
-        <input id="id" />
-      </div>
-      <div>
-        <label for="password">비밀번호</label>
-        <input id="password" type="password" />
-      </div>
-      <div>
-        <label for="password-check">비밀번호 재확인</label>
-        <input id="password-check" type="password" />
-      </div>
-      <div>
-        <label for="name">이름</label>
-        <input id="name" />
-      </div>
-      <div>
-        <label for="birthday">생년월일</label>
-        <input id="year" type="number" />
-        <select name="month">
-          <option value="">월</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12">12</option>
-        </select>
-        <input id="day" type="number" />
-      </div>
-      <div>
-        <label for="sex">성별</label>
-        <select id="sex" name="sex">
-          <option value="">성별선택</option>
-          <option value="male">남성</option>
-          <option value="female">여성</option>
-        </select>
-      </div>
-      <div>
-        <label for="email">이메일</label>
-        <input id="email" type="email" />
-      </div>
-      <div>
-        <label for="phone-number">휴대전화</label>
-        <input id="phone-number" />
-      </div>
-      <div>
-        <label for="interests">관심사</label>
-        <input id="interests" />
-      </div>
-      <div>
-        <span>약관에 동의합니다.</span>
-        <input type="checkbox" />
-      </div>
-      <button>초기화</button>
-      <button>가입하기</button>
-    </form>
+    <div id="register">
+      <header>
+        회원가입
+      </header>
+      <form>
+        <div>
+          <label for="id">아이디</label>
+          <input id="id" />
+          <span class="warning hide">이미 사용중인 아이디입니다.</span>
+        </div>
+        <div>
+          <label for="password">비밀번호</label>
+          <input id="password" type="password" />
+          <span class="safe">안전한 비밀번호입니다.</span>
+        </div>
+        <div>
+          <label for="password-check">비밀번호 재확인</label>
+          <input id="password-check" type="password" />
+          <span class="warning">비밀번호가 일치하지 않습니다.</span>
+        </div>
+        <div>
+          <label for="name">이름</label>
+          <input id="name" />
+        </div>
+        <div>
+          <label>생년월일</label>
+          <div id="birthday">
+            <input id="year" type="number" />
+            <select name="month">
+              <option value="">월</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+            <input id="day" type="number" />
+          </div>
+          <span class="warning">태어난 년도 4자리를 정확하게 입력하세요.</span>
+        </div>
+        <div>
+          <label for="sex">성별</label>
+          <select id="sex" name="sex">
+            <option value="">성별선택</option>
+            <option value="male">남성</option>
+            <option value="female">여성</option>
+          </select>
+        </div>
+        <div>
+          <label for="email">이메일</label>
+          <input id="email" type="email" />
+          <span class="warning">이메일 주소를 다시 확인해주세요.</span>
+        </div>
+        <div>
+          <label for="phone-number">휴대전화</label>
+          <input id="phone-number" />
+          <span class="warning">형식에 맞지 않는 번호입니다.</span>
+        </div>
+        <div>
+          <label for="interests">관심사</label>
+          <input id="interests" />
+          <span class="warning">3개 이상의 관심사를 입력하세요.</span>
+        </div>
+        <div id="agreement">
+          <span>약관에 동의합니다.</span>
+          <input type="checkbox" disabled />
+        </div>
+        <div id="buttons">
+          <button>초기화</button>
+          <button>가입하기</button>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
