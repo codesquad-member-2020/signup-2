@@ -1,0 +1,22 @@
+{
+  "name": "signup-2",
+  "version": "1.0.0",
+  "description": "codesquad signup project",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sangwon21/signup-2.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sangwon21/signup-2/issues"
+  },
+  "homepage": "https://github.com/sangwon21/signup-2#readme",
+  "dependencies": {
+    "jest": "^25.1.0"
+  }
+}
