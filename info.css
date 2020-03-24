@@ -1,0 +1,17 @@
+body {
+  background-color: #f8f9fa;
+  font-family: "Nanum Gothic Coding", monospace;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  font-weight: 700;
+}
+
+.info div {
+  margin-bottom: 3rem;
+}
