@@ -1,5 +1,6 @@
 body {
   background-color: #f8f9fa;
+  font-family: "Nanum Gothic Coding", monospace;
 }
 #register {
   align-items: center;
@@ -42,7 +43,7 @@ form > div {
   font-weight: 700;
 }
 
-label {
+form label {
   font-weight: 700;
   font-size: 1rem;
   margin-bottom: 1.2rem;
@@ -93,11 +94,69 @@ span {
   display: block;
 }
 
-div span {
+form span {
   margin-top: 0.4rem;
 }
 
 #agreement {
   display: flex;
   flex-direction: row;
+}
+
+.center {
+  left: 50%;
+  transform: translate(-50%, 30vh);
+}
+
+#modal {
+  position: absolute;
+  border: 1px solid #000000;
+  background-color: #f4f4f4;
+  top: 0;
+  width: 30vw;
+  height: 40vh;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.modal-content {
+  height: 70%;
+  padding: 1rem;
+}
+
+#privacy-agreement {
+  display: block;
+  overflow-y: scroll;
+  height: 60%;
+  text-align: justify;
+  border: 1px solid #000000;
+}
+
+#modal-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#modal-button button {
+  width: 30%;
+  height: 2rem;
+  background-color: #08a600;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.modal-close {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 98%;
+}
+
+.modal-title {
+  font-weight: 500;
+  margin-bottom: 3rem;
 }
