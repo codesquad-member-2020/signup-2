@@ -12,19 +12,10 @@ class SignUpNextButton: UIButton {
     
     private let keyColor = UIColor(named: "KeyColor")
     
-    var isIDValid: Bool = false { didSet { checkButtonValidation() } }
-    var isPWValid: Bool = false { didSet { checkButtonValidation() } }
-    var isPWCheckValid: Bool = false { didSet { checkButtonValidation() } }
-    var isNameValid: Bool = false { didSet { checkButtonValidation() } }
-    
-    private func checkButtonValidation() {
-        isValid = isIDValid && isPWValid && isPWCheckValid && isNameValid
-    }
-    
     var isValid: Bool = false {
         didSet {
             isEnabled = isValid
-            updateButton()
+            updateButtonStatus()
         }
     }
     
@@ -38,7 +29,7 @@ class SignUpNextButton: UIButton {
         configure()
     }
     
-    private func updateButton() {
+    private func updateButtonStatus() {
         let color = isValid ? keyColor : .lightGray
         tintColor = color
     }
@@ -49,6 +40,6 @@ class SignUpNextButton: UIButton {
         layer.cornerRadius = 0
         setTitleColor(.lightGray, for: .disabled)
         setTitleColor(keyColor, for: .normal)
-        updateButton()
+        updateButtonStatus()
     }
 }
