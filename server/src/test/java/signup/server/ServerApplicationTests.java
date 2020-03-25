@@ -1,10 +1,10 @@
-package com.codesquad.signup;
+package signup.server;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SignupApplicationTests {
+class ServerApplicationTests {
 
 	@Test
 	void contextLoads() {

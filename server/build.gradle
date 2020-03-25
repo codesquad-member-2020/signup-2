@@ -4,7 +4,7 @@ plugins {
 	id 'java'
 }
 
-group = 'com.codesquad'
+group = 'signup'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
@@ -15,8 +15,8 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	compile 'com.h2database:h2'
-	compile 'pl.allegro.tech.boot:handlebars-spring-boot-starter:0.3.0'
+	implementation 'com.h2database:h2'
+	implementation 'pl.allegro.tech.boot:handlebars-spring-boot-starter:0.3.0'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}

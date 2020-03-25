@@ -1,13 +1,13 @@
-package com.codesquad.signup;
+package signup.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SignupApplication {
+public class ServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SignupApplication.class, args);
+		SpringApplication.run(ServerApplication.class, args);
 	}
 
 }
