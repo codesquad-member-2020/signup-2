@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import signup.server.domain.User;
 import signup.server.domain.UserRepository;
 
+import javax.servlet.http.HttpSession;
 import java.net.URI;
 
 @RestController
@@ -43,6 +44,28 @@ public class UserController {
             logger.info(e.getMessage());
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
         }
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<User> showUserInfo(@PathVariable Integer id, HttpSession session) {
+        Object sessionUser = session.getAttribute("user");
+        if(sessionUser == null) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+        }
+
+        User loginedUser = (User)sessionUser;
+        if(!loginedUser.matchId(id)){
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+        }
+
+        try {
+            User user = userRepository.findById(id).orElseThrow(NotFoundException::new);
+            return ResponseEntity.ok(user);
+        } catch (NotFoundException e) {
+            logger.info(e.getMessage());
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+
     }
 
 }

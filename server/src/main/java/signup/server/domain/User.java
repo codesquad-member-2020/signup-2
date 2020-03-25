@@ -1,5 +1,6 @@
 package signup.server.domain;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.data.annotation.Id;
@@ -8,6 +9,7 @@ import signup.server.web.UnauthorizedException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class User {
 
     @Id
@@ -68,5 +70,9 @@ public class User {
     public void verify(User candidate) {
         if(!password.equals(candidate.password))
             throw new UnauthorizedException();
+    }
+
+    public boolean matchId(Integer id) {
+        return this.id == id;
     }
 }

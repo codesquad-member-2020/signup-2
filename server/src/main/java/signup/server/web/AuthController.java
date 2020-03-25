@@ -31,7 +31,7 @@ public class AuthController {
             origin.verify(candidate);
 
             HttpSession session = request.getSession();
-            session.setAttribute("user", candidate);
+            session.setAttribute("user", origin);
 
             return ResponseEntity.accepted().build();
         } catch (UnauthorizedException e) {
