@@ -3,6 +3,7 @@ package signup.server.domain;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.data.annotation.Id;
+import signup.server.web.UnauthorizedException;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -32,6 +33,10 @@ public class User {
         this.id = id;
     }
 
+    public String getAccountId() {
+        return accountId;
+    }
+
     public void setAccountId(String accountId) {
         this.accountId = accountId;
     }
@@ -58,5 +63,10 @@ public class User {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public void verify(User candidate) {
+        if(!password.equals(candidate.password))
+            throw new UnauthorizedException();
     }
 }
