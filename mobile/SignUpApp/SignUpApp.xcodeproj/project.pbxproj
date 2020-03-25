@@ -7,16 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3840F5AC242A402F007D3156 /* SignUpAlertLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840F5AB242A402F007D3156 /* SignUpAlertLabel.swift */; };
+		3840F5AE242A7373007D3156 /* PWTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840F5AD242A7373007D3156 /* PWTextField.swift */; };
+		3840F5B0242A7AD2007D3156 /* PWCheckTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840F5AF242A7AD2007D3156 /* PWCheckTextField.swift */; };
+		3840F5B3242B11EE007D3156 /* IDStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840F5B2242B11EE007D3156 /* IDStackView.swift */; };
+		385E1221242B214400AAFD1B /* NameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385E1220242B214400AAFD1B /* NameTextField.swift */; };
 		386B137C24286F4B00E0EA29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B137B24286F4B00E0EA29 /* AppDelegate.swift */; };
 		386B137E24286F4B00E0EA29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B137D24286F4B00E0EA29 /* SceneDelegate.swift */; };
 		386B138024286F4B00E0EA29 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B137F24286F4B00E0EA29 /* SignUpViewController.swift */; };
 		386B138324286F4B00E0EA29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386B138124286F4B00E0EA29 /* Main.storyboard */; };
 		386B138524286F4C00E0EA29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 386B138424286F4C00E0EA29 /* Assets.xcassets */; };
 		386B138824286F4C00E0EA29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386B138624286F4C00E0EA29 /* LaunchScreen.storyboard */; };
+		389A39D2242A2D9E00207331 /* IDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389A39D1242A2D9E00207331 /* IDTextField.swift */; };
+		38C1131C242B193300C35069 /* SignUpStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C1131B242B193300C35069 /* SignUpStackView.swift */; };
+		38C1131E242B1D7000C35069 /* PWStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C1131D242B1D7000C35069 /* PWStackView.swift */; };
+		38C11320242B1D9800C35069 /* PWCheckStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C1131F242B1D9800C35069 /* PWCheckStackView.swift */; };
+		38C11322242B1DEE00C35069 /* NameStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C11321242B1DEE00C35069 /* NameStackView.swift */; };
 		38E3E5162428AEDE00B4CA36 /* SignUpTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E3E5152428AEDE00B4CA36 /* SignUpTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3840F5AB242A402F007D3156 /* SignUpAlertLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAlertLabel.swift; sourceTree = "<group>"; };
+		3840F5AD242A7373007D3156 /* PWTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWTextField.swift; sourceTree = "<group>"; };
+		3840F5AF242A7AD2007D3156 /* PWCheckTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWCheckTextField.swift; sourceTree = "<group>"; };
+		3840F5B2242B11EE007D3156 /* IDStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDStackView.swift; sourceTree = "<group>"; };
+		385E1220242B214400AAFD1B /* NameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextField.swift; sourceTree = "<group>"; };
 		386B137824286F4B00E0EA29 /* SignUpApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUpApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386B137B24286F4B00E0EA29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		386B137D24286F4B00E0EA29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,6 +40,11 @@
 		386B138424286F4C00E0EA29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		386B138724286F4C00E0EA29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		386B138924286F4C00E0EA29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		389A39D1242A2D9E00207331 /* IDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDTextField.swift; sourceTree = "<group>"; };
+		38C1131B242B193300C35069 /* SignUpStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStackView.swift; sourceTree = "<group>"; };
+		38C1131D242B1D7000C35069 /* PWStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWStackView.swift; sourceTree = "<group>"; };
+		38C1131F242B1D9800C35069 /* PWCheckStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWCheckStackView.swift; sourceTree = "<group>"; };
+		38C11321242B1DEE00C35069 /* NameStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameStackView.swift; sourceTree = "<group>"; };
 		38E3E5152428AEDE00B4CA36 /* SignUpTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,6 +59,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3840F5B1242B1130007D3156 /* SignUpStackView */ = {
+			isa = PBXGroup;
+			children = (
+				38C1131B242B193300C35069 /* SignUpStackView.swift */,
+				3840F5B2242B11EE007D3156 /* IDStackView.swift */,
+				38C1131D242B1D7000C35069 /* PWStackView.swift */,
+				38C1131F242B1D9800C35069 /* PWCheckStackView.swift */,
+				38C11321242B1DEE00C35069 /* NameStackView.swift */,
+			);
+			path = SignUpStackView;
+			sourceTree = "<group>";
+		};
 		386B136F24286F4B00E0EA29 = {
 			isa = PBXGroup;
 			children = (
@@ -94,10 +126,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		389A39D02429089D00207331 /* SignUp */ = {
+		3873AD10242A30BF0089F9E8 /* SignUpTextFields */ = {
 			isa = PBXGroup;
 			children = (
 				38E3E5152428AEDE00B4CA36 /* SignUpTextField.swift */,
+				389A39D1242A2D9E00207331 /* IDTextField.swift */,
+				3840F5AD242A7373007D3156 /* PWTextField.swift */,
+				3840F5AF242A7AD2007D3156 /* PWCheckTextField.swift */,
+				385E1220242B214400AAFD1B /* NameTextField.swift */,
+			);
+			path = SignUpTextFields;
+			sourceTree = "<group>";
+		};
+		389A39D02429089D00207331 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				3840F5B1242B1130007D3156 /* SignUpStackView */,
+				3873AD10242A30BF0089F9E8 /* SignUpTextFields */,
+				3840F5AB242A402F007D3156 /* SignUpAlertLabel.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -173,10 +219,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38C1131E242B1D7000C35069 /* PWStackView.swift in Sources */,
+				3840F5AE242A7373007D3156 /* PWTextField.swift in Sources */,
 				386B138024286F4B00E0EA29 /* SignUpViewController.swift in Sources */,
+				389A39D2242A2D9E00207331 /* IDTextField.swift in Sources */,
 				386B137C24286F4B00E0EA29 /* AppDelegate.swift in Sources */,
 				386B137E24286F4B00E0EA29 /* SceneDelegate.swift in Sources */,
+				38C1131C242B193300C35069 /* SignUpStackView.swift in Sources */,
+				38C11320242B1D9800C35069 /* PWCheckStackView.swift in Sources */,
+				3840F5AC242A402F007D3156 /* SignUpAlertLabel.swift in Sources */,
+				38C11322242B1DEE00C35069 /* NameStackView.swift in Sources */,
+				385E1221242B214400AAFD1B /* NameTextField.swift in Sources */,
 				38E3E5162428AEDE00B4CA36 /* SignUpTextField.swift in Sources */,
+				3840F5B0242A7AD2007D3156 /* PWCheckTextField.swift in Sources */,
+				3840F5B3242B11EE007D3156 /* IDStackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +376,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SignUpApp/SignUpApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N2GAL8582Q;
 				INFOPLIST_FILE = SignUpApp/Info.plist;
@@ -338,6 +395,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SignUpApp/SignUpApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N2GAL8582Q;
 				INFOPLIST_FILE = SignUpApp/Info.plist;
