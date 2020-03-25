@@ -2,12 +2,11 @@ import {
   VALIDATION_MESSAGE,
   VALIDATION_REGULAR_EXPRESSION
 } from "../../constants/constants";
+import composedPasswordTest from "./passwordTest";
+import composedMobilePhoneTest from "./mobilePhoneTest";
+import composedBirthdateTest from "./birthdateTest";
 
 const { ID, EMAIL, PASSWORD_CHECK } = VALIDATION_MESSAGE;
-
-const composedPasswordTest = require("./passwordTest");
-const composedMobilePhoneTest = require("./mobilePhoneTest");
-const composedBirthdateTest = require("./birthdateTest");
 
 export const passwordTest = password => {
   const [_, result, message] = composedPasswordTest(password);

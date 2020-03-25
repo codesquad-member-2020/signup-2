@@ -19,7 +19,7 @@ export const VALIDATION_MESSAGE = {
     SAFE_PASSWORD: "사용해도 되는 비밀번호입니다."
   },
   EMAIL: {
-    NOT_VALID_EMAIL: "허락되지 않은 이메일 형식입니다.",
+    NOT_VALID_EMAIL: "이메일 주소를 다시 확인해주세요.",
     SAFE_EMAIL: "사용해도 되는 이메일입니다."
   },
   MOBILE_PHONE: {
