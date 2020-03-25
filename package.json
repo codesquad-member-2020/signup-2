@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/sangwon21/signup-2#readme",
   "dependencies": {
-    "jest": "^25.1.0"
+    "jest": "^25.1.0",
+    "moment": "^2.24.0"
   }
 }
