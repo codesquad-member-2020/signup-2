@@ -1,0 +1,19 @@
+const ALLOWED_MOBILE_PHONE_STARTER = ["010", "011", "017", "019"];
+
+const ALLOWED_MOBILE_PHONE_LENGTH = [10, 11];
+
+const PASSWORD_ERROR_MESSAGE = {
+  NOT_ALLOWED_LENGTH: "8자 이상 16자 이하로 입력해주세요.",
+  AT_LEAST_ONE_ENGLISH_LETTER: "영문 문자를 최소 1자 이상 포함해주세요.",
+  AT_LEAST_ONE_NUMBER: "숫자를 최소 1자 이상 포함해주세요.",
+  AT_LEAST_ONE_SPECIAL_LETTER: "특수문자를 최소 1자 이상 포함해주세요."
+};
+
+const PASSWORD_LENGTH_RANGE = [8, 16];
+
+module.exports = {
+  ALLOWED_MOBILE_PHONE_STARTER,
+  ALLOWED_MOBILE_PHONE_LENGTH,
+  PASSWORD_ERROR_MESSAGE,
+  PASSWORD_LENGTH_RANGE
+};
