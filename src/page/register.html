@@ -50,7 +50,7 @@
           <label>생년월일</label>
           <div id="birthday">
             <input id="year" type="number" />
-            <select name="month">
+            <select name="month" id="month">
               <option value="">월</option>
               <option value="01">1</option>
               <option value="02">2</option>
@@ -65,9 +65,9 @@
               <option value="11">11</option>
               <option value="12">12</option>
             </select>
-            <input id="day" type="number" />
+            <input id="day" type="number" maxlength="2" />
           </div>
-          <span class="warning" id="birthdate-warning-message"
+          <span class="warning hide" id="birthdate-warning-message"
             >태어난 년도 4자리를 정확하게 입력하세요.</span
           >
         </div>
