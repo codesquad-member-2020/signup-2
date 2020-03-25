@@ -5,6 +5,6 @@ CREATE TABLE user (
     name varchar(64) NOT NULL,
     birthday date NOT NULL,
     is_male boolean NOT NULL,
-    email varchar(64) NOT NULL,
-    phone_number varchar(64) NOT NULL
+    email varchar(64) UNIQUE NOT NULL,
+    phone_number varchar(64) UNIQUE NOT NULL
 );
