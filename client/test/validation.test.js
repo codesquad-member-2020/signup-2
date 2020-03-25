@@ -4,7 +4,7 @@ const {
   emailTest,
   mobilePhoneNumberTest,
   birthdateTest
-} = require("../src/javascript/validation/validation.js");
+} = require("../src/javascript/validation/validation");
 
 const {
   VALIDATION_MESSAGE: { ID, PASSWORD, EMAIL, MOBILE_PHONE, BIRTHDATE }
@@ -154,28 +154,28 @@ describe("mobile phone test - 성공 경우", () => {
 
 describe("birth date test - 실패 경우", () => {
   test("없는 날짜일 경우 - 1", () => {
-    expect(birthdateTest("2019", "03", "32")).toEqual([
+    expect(birthdateTest(["2019", "03", "32"])).toEqual([
       false,
       "날짜를 확인해주세요"
     ]);
   });
 
   test("없는 날짜일 경우 (윤년이 없는 경우) - 2", () => {
-    expect(birthdateTest("2019", "02", "29")).toEqual([
+    expect(birthdateTest(["2019", "02", "29"])).toEqual([
       false,
       "날짜를 확인해주세요"
     ]);
   });
 
   test("만 15세가 안 됐을 경우", () => {
-    expect(birthdateTest("2017", "03", "01")).toEqual([
+    expect(birthdateTest(["2017", "03", "01"])).toEqual([
       false,
       "만 15세 이상만 가입할 수 있습니다."
     ]);
   });
 
   test("만 99세가 넘었을 경우", () => {
-    expect(birthdateTest("1919", "03", "01")).toEqual([
+    expect(birthdateTest(["1919", "03", "01"])).toEqual([
       false,
       "만 99세 이하만 가입할 수 있습니다."
     ]);
@@ -184,6 +184,6 @@ describe("birth date test - 실패 경우", () => {
 
 describe("birth date test - 성공 경우", () => {
   test("birth date test - 성공 경우", () => {
-    expect(birthdateTest("1980", "05", "18")).toEqual([true, ""]);
+    expect(birthdateTest(["1980", "05", "18"])).toEqual([true, ""]);
   });
 });
