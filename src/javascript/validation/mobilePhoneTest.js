@@ -1,9 +1,11 @@
-const compose = require("../../util/util");
-const {
+import compose from "../../util/compose";
+import {
   ALLOWED_MOBILE_PHONE_LENGTH,
   ALLOWED_MOBILE_PHONE_STARTER,
-  VALIDATION_MESSAGE: { MOBILE_PHONE }
-} = require("../../constants/constants");
+  VALIDATION_MESSAGE
+} from "../../constants/constants";
+
+const { MOBILE_PHONE } = VALIDATION_MESSAGE;
 
 const checkMobilePhoneLength = mobilePhoneNumber => {
   if (
@@ -45,4 +47,4 @@ const composedMobilePhoneTest = compose(
   checkMobilePhoneStarter
 );
 
-module.exports = composedMobilePhoneTest;
+export default composedMobilePhoneTest;

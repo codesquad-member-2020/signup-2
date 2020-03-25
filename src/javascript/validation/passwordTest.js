@@ -1,9 +1,11 @@
-const compose = require("../../util/util");
-const {
-  VALIDATION_MESSAGE: { PASSWORD },
+import compose from "../../util/compose";
+import {
+  VALIDATION_MESSAGE,
   VALIDATION_REGULAR_EXPRESSION,
   ALLOWED_PASSWORD_LENGTH_RANGE
-} = require("../../constants/constants");
+} from "../../constants/constants";
+
+const { PASSWORD } = VALIDATION_MESSAGE;
 
 const checkPasswordLength = password => {
   const [minLength, maxLength] = ALLOWED_PASSWORD_LENGTH_RANGE;
@@ -62,4 +64,4 @@ const composedPasswordTest = compose(
   checkPasswordSpecialLetter
 );
 
-module.exports = composedPasswordTest;
+export default composedPasswordTest;

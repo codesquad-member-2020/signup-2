@@ -1,10 +1,10 @@
-const ALLOWED_MOBILE_PHONE_STARTER = ["010", "011", "017", "019"];
+export const ALLOWED_MOBILE_PHONE_STARTER = ["010", "011", "017", "019"];
 
-const ALLOWED_MOBILE_PHONE_LENGTH = [10, 11];
+export const ALLOWED_MOBILE_PHONE_LENGTH = [10, 11];
 
-const ALLOWED_PASSWORD_LENGTH_RANGE = [8, 16];
+export const ALLOWED_PASSWORD_LENGTH_RANGE = [8, 16];
 
-const VALIDATION_MESSAGE = {
+export const VALIDATION_MESSAGE = {
   ID: {
     NOT_ALLOWED_ID:
       "아이디는  5~20자의 영 소문자, 숫자, 특수기호로만 이루어져야 합니다",
@@ -40,7 +40,7 @@ const VALIDATION_MESSAGE = {
   }
 };
 
-const VALIDATION_REGULAR_EXPRESSION = {
+export const VALIDATION_REGULAR_EXPRESSION = {
   //출처: https://hee-kkk.tistory.com/22 [개발, 개발 누가 말했나]
   AT_LEAST_ONE_NUMBER: /[0-9]/g,
   AT_LEAST_ONE_ENGLISH_LETTER: /[a-zA-z]/gi,
@@ -48,12 +48,4 @@ const VALIDATION_REGULAR_EXPRESSION = {
   ID_RULE: /^[a-zA-Z0-9$@$!%*#?&\-]{5,20}$/,
   // 출처: https://epthffh.tistory.com/entry/비밀번호-정규식 [물고기 개발자의 블로그]
   EMAIL_RULE: /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i
-};
-
-module.exports = {
-  ALLOWED_MOBILE_PHONE_STARTER,
-  ALLOWED_MOBILE_PHONE_LENGTH,
-  ALLOWED_PASSWORD_LENGTH_RANGE,
-  VALIDATION_MESSAGE,
-  VALIDATION_REGULAR_EXPRESSION
 };

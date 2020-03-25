@@ -1,8 +1,8 @@
-const compose = require("../../util/util");
-const moment = require("moment");
-const {
-  VALIDATION_MESSAGE: { BIRTHDATE }
-} = require("../../constants/constants");
+import compose from "../../util/compose";
+import moment from "moment";
+import { VALIDATION_MESSAGE } from "../../constants/constants";
+
+const { BIRTHDATE } = VALIDATION_MESSAGE;
 
 const checkDateValidity = birthdateString => {
   const birthdate = moment(birthdateString);
@@ -43,4 +43,4 @@ const composedBirthdateTest = compose(
   checkOverNintyNine
 );
 
-module.exports = composedBirthdateTest;
+export default composedBirthdateTest;
