@@ -12,32 +12,47 @@ import {
   withTestAndSelector,
   withTestAndSelectors
 } from "./enhanceTest";
+import { CSS_ID_CLASS } from "../../constants/constants";
+
+const { REGISTER } = CSS_ID_CLASS;
 
 const idInputWithTest = withTest(idTest);
 const emailInputWithTest = withTest(emailTest);
 const mobilePhoneNumberInputWithTest = withTest(mobilePhoneNumberTest);
 const passwordInputWithTest = withTest(passwordTest);
 const passwordCheckInputWithTest = withTestAndSelector(passwordCheckTest)(
-  "#password"
+  `#${REGISTER.PASSWORD}`
 );
 const birthdateCheckInputWithTest = withTestAndSelectors(birthdateTest)(
-  "birthdate"
-)("#year", "#month", "#day");
+  REGISTER.BIRTHDATE
+)(`#${REGISTER.YEAR}`, `#${REGISTER.MONTH}`, `#${REGISTER.DAY}`);
 
-SELECT_ELEMENT("#id").addEventListener("input", idInputWithTest);
-SELECT_ELEMENT("#email").addEventListener("input", emailInputWithTest);
-SELECT_ELEMENT("#mobile-phone-number").addEventListener(
+SELECT_ELEMENT(`#${REGISTER.ID}`).addEventListener("input", idInputWithTest);
+SELECT_ELEMENT(`#${REGISTER.EMAIL}`).addEventListener(
+  "input",
+  emailInputWithTest
+);
+SELECT_ELEMENT(`#${REGISTER.MOBILE_PHONE_NUMBER}`).addEventListener(
   "input",
   mobilePhoneNumberInputWithTest
 );
-SELECT_ELEMENT("#password").addEventListener("input", passwordInputWithTest);
-SELECT_ELEMENT("#password-check").addEventListener(
+SELECT_ELEMENT(`#${REGISTER.PASSWORD}`).addEventListener(
+  "input",
+  passwordInputWithTest
+);
+SELECT_ELEMENT(`#${REGISTER.PASSWORD_CHECK}`).addEventListener(
   "input",
   passwordCheckInputWithTest
 );
-SELECT_ELEMENT("#year").addEventListener("change", birthdateCheckInputWithTest);
-SELECT_ELEMENT("#month").addEventListener(
+SELECT_ELEMENT(`#${REGISTER.YEAR}`).addEventListener(
   "change",
   birthdateCheckInputWithTest
 );
-SELECT_ELEMENT("#day").addEventListener("change", birthdateCheckInputWithTest);
+SELECT_ELEMENT(`#${REGISTER.MONTH}`).addEventListener(
+  "change",
+  birthdateCheckInputWithTest
+);
+SELECT_ELEMENT(`#${REGISTER.DAY}`).addEventListener(
+  "change",
+  birthdateCheckInputWithTest
+);

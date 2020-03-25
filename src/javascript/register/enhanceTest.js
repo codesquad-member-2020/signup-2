@@ -1,14 +1,17 @@
 import { SELECT_ELEMENT } from "../../util/selector";
+import { CSS_ID_CLASS } from "../../constants/constants";
+
+const { REGISTER } = CSS_ID_CLASS;
 
 const caseOfPassword = (result, classList) => {
-  classList.contains("hide") && classList.remove("hide");
+  classList.contains(REGISTER.HIDE) && classList.remove(REGISTER.HIDE);
   if (result) {
-    classList.contains("warning") && classList.remove("warning");
-    classList.add("safe");
+    classList.contains(REGISTER.WARNING) && classList.remove(REGISTER.WARNING);
+    classList.add(REGISTER.SAFE);
     return;
   }
-  classList.contains("safe") && classList.remove("safe");
-  classList.add("warning");
+  classList.contains(REGISTER.SAFE) && classList.remove(REGISTER.SAFE);
+  classList.add(REGISTER.WARNING);
 };
 
 function handleTestResult(target, result, message) {
@@ -16,18 +19,18 @@ function handleTestResult(target, result, message) {
   const warningMessageElement = SELECT_ELEMENT(`#${id}-warning-message`);
   warningMessageElement.innerHTML = message;
 
-  if (target.id && target.id === "password") {
+  if (target.id && target.id === REGISTER.PASSWORD) {
     caseOfPassword(result, warningMessageElement.classList);
     return;
   }
 
-  if (!result && warningMessageElement.classList.contains("hide")) {
-    warningMessageElement.classList.remove("hide");
+  if (!result && warningMessageElement.classList.contains(REGISTER.HIDE)) {
+    warningMessageElement.classList.remove(REGISTER.HIDE);
     return;
   }
 
-  if (result && !warningMessageElement.classList.contains("hide")) {
-    warningMessageElement.classList.add("hide");
+  if (result && !warningMessageElement.classList.contains(REGISTER.HIDE)) {
+    warningMessageElement.classList.add(REGISTER.HIDE);
   }
 }
 
@@ -60,7 +63,7 @@ export function withTestAndSelectors(test) {
         const selectorValueArray = selectorArray.map(
           selector => SELECT_ELEMENT(selector).value
         );
-        const [result, message] = test(...selectorValueArray);
+        const [result, message] = test(selectorValueArray);
         handleTestResult(target, result, message);
       };
     };

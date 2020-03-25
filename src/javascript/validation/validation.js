@@ -41,7 +41,7 @@ export const mobilePhoneNumberTest = mobilePhoneNumber => {
   return [result, message];
 };
 
-export const birthdateTest = (year, month, day) => {
-  const [_, result, message] = composedBirthdateTest(year, month, day);
+export const birthdateTest = birthdate => {
+  const [_, result, message] = composedBirthdateTest(birthdate);
   return [result, message];
 };

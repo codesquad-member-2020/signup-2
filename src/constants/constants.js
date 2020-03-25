@@ -48,3 +48,20 @@ export const VALIDATION_REGULAR_EXPRESSION = {
   // 출처: https://epthffh.tistory.com/entry/비밀번호-정규식 [물고기 개발자의 블로그]
   EMAIL_RULE: /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i
 };
+
+export const CSS_ID_CLASS = {
+  REGISTER: {
+    PASSWORD: "password",
+    PASSWORD_CHECK: "password-check",
+    EMAIL: "email",
+    HIDE: "hide",
+    SAFE: "safe",
+    WARNING: "warning",
+    BIRTHDATE: "birthdate",
+    YEAR: "year",
+    MONTH: "month",
+    DAY: "day",
+    ID: "id",
+    MOBILE_PHONE_NUMBER: "mobile-phone-number"
+  }
+};

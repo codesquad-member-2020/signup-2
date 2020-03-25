@@ -4,7 +4,8 @@ import { VALIDATION_MESSAGE } from "../../constants/constants";
 
 const { BIRTHDATE } = VALIDATION_MESSAGE;
 
-const checkDateValidity = (year, month, day) => {
+export const checkDateValidity = targetBirthdate => {
+  const [year, month, day] = targetBirthdate;
   if (!year || !month || !day) {
     return [birthdate, false, BIRTHDATE.NOT_ALLOWED_DATE];
   }
@@ -41,7 +42,7 @@ const checkOverNintyNine = result => {
   return result;
 };
 
-const composedBirthdateTest = compose(
+export const composedBirthdateTest = compose(
   checkDateValidity,
   checkUnderFifteen,
   checkOverNintyNine
