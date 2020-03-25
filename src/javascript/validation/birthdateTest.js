@@ -4,8 +4,12 @@ import { VALIDATION_MESSAGE } from "../../constants/constants";
 
 const { BIRTHDATE } = VALIDATION_MESSAGE;
 
-const checkDateValidity = birthdateString => {
-  const birthdate = moment(birthdateString);
+const checkDateValidity = (year, month, day) => {
+  if (!year || !month || !day) {
+    return [birthdate, false, BIRTHDATE.NOT_ALLOWED_DATE];
+  }
+  const birthdateString = `${year}-${month}-${day}`;
+  const birthdate = moment(birthdateString, "YYYY-MM-DD");
   if (!birthdate.isValid()) {
     return [birthdate, false, BIRTHDATE.NOT_ALLOWED_DATE];
   }
