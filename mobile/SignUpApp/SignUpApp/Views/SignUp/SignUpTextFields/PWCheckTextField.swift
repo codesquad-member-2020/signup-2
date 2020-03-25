@@ -25,7 +25,7 @@ class PWCheckTextField: SignUpTextField {
     }
     
     override func checkValidation(text: String, regex: String = "") -> Bool {
-        return password == text
+        return password == text && text != ""
     }
     
     func textFieldDidChangeSelection(_ textField: UITextField) {

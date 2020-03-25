@@ -29,8 +29,11 @@ class SignUpTextField: UITextField {
     var isValid: Bool = false {
         didSet {
             updateTextField(for: isValid)
+            validationChangedHandler?(isValid)
         }
     }
+    
+    var validationChangedHandler: ((Bool) -> Void)?
     
     var borderColor: UIColor = .darkGray {
         didSet {

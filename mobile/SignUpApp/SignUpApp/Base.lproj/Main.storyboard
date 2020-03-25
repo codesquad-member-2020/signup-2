@@ -26,7 +26,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="2zU-Ju-frM">
-                                <rect key="frame" x="40" y="108" width="334" height="358.5"/>
+                                <rect key="frame" x="40" y="108" width="334" height="313.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Mjd-Td-Pjk" customClass="IDStackView" customModule="SignUpApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="66"/>
@@ -57,7 +57,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="N9C-L7-yVC" customClass="PWStackView" customModule="SignUpApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="97.5" width="334" height="66"/>
+                                        <rect key="frame" x="0.0" y="82.5" width="334" height="66"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="uLy-UC-AJ8">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="66"/>
@@ -85,7 +85,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="fuG-2a-6JZ" customClass="PWCheckStackView" customModule="SignUpApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="195" width="334" height="66"/>
+                                        <rect key="frame" x="0.0" y="165" width="334" height="66"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Ju8-69-Cpw">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="66"/>
@@ -113,7 +113,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="rDu-MO-NRl" customClass="NameStackView" customModule="SignUpApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="292.5" width="334" height="66"/>
+                                        <rect key="frame" x="0.0" y="247.5" width="334" height="66"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="8f1-Re-yqQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="66"/>
@@ -142,8 +142,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="753-3e-jcT">
-                                <rect key="frame" x="163" y="490.5" width="88" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="753-3e-jcT" customClass="SignUpNextButton" customModule="SignUpApp" customModuleProvider="target">
+                                <rect key="frame" x="163" y="445.5" width="88" height="34"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="88" id="B5q-CZ-XSf"/>
@@ -165,7 +165,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sE0-We-UdW" secondAttribute="trailing" constant="80" id="DTh-Wz-0n1"/>
                             <constraint firstItem="sE0-We-UdW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K0K-q4-0BV"/>
                             <constraint firstItem="2zU-Ju-frM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OMu-hM-uSs"/>
-                            <constraint firstItem="2zU-Ju-frM" firstAttribute="height" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="ZOx-Ra-QyT"/>
+                            <constraint firstItem="2zU-Ju-frM" firstAttribute="height" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.35" id="ZOx-Ra-QyT"/>
                             <constraint firstItem="2zU-Ju-frM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="hpR-Go-ffx"/>
                             <constraint firstItem="sE0-We-UdW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="it4-96-iYU"/>
                         </constraints>
@@ -180,6 +180,7 @@
                         <outlet property="PWTextField" destination="2G8-eh-wUi" id="kTU-hC-Y1d"/>
                         <outlet property="nameStackView" destination="rDu-MO-NRl" id="FCb-LO-9qb"/>
                         <outlet property="nameTextField" destination="80Y-j2-1pj" id="jyC-YX-eP9"/>
+                        <outlet property="nextButton" destination="753-3e-jcT" id="HCo-fk-9ah"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

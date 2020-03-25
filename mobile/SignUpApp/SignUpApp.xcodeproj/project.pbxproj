@@ -12,6 +12,7 @@
 		3840F5B0242A7AD2007D3156 /* PWCheckTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840F5AF242A7AD2007D3156 /* PWCheckTextField.swift */; };
 		3840F5B3242B11EE007D3156 /* IDStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840F5B2242B11EE007D3156 /* IDStackView.swift */; };
 		385E1221242B214400AAFD1B /* NameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385E1220242B214400AAFD1B /* NameTextField.swift */; };
+		385E1224242B338D00AAFD1B /* SignUpNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385E1223242B338D00AAFD1B /* SignUpNextButton.swift */; };
 		386B137C24286F4B00E0EA29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B137B24286F4B00E0EA29 /* AppDelegate.swift */; };
 		386B137E24286F4B00E0EA29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B137D24286F4B00E0EA29 /* SceneDelegate.swift */; };
 		386B138024286F4B00E0EA29 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B137F24286F4B00E0EA29 /* SignUpViewController.swift */; };
@@ -32,6 +33,7 @@
 		3840F5AF242A7AD2007D3156 /* PWCheckTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PWCheckTextField.swift; sourceTree = "<group>"; };
 		3840F5B2242B11EE007D3156 /* IDStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDStackView.swift; sourceTree = "<group>"; };
 		385E1220242B214400AAFD1B /* NameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextField.swift; sourceTree = "<group>"; };
+		385E1223242B338D00AAFD1B /* SignUpNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNextButton.swift; sourceTree = "<group>"; };
 		386B137824286F4B00E0EA29 /* SignUpApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUpApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386B137B24286F4B00E0EA29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		386B137D24286F4B00E0EA29 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				3840F5B1242B1130007D3156 /* SignUpStackView */,
 				3873AD10242A30BF0089F9E8 /* SignUpTextFields */,
 				3840F5AB242A402F007D3156 /* SignUpAlertLabel.swift */,
+				385E1223242B338D00AAFD1B /* SignUpNextButton.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -231,6 +234,7 @@
 				38C11322242B1DEE00C35069 /* NameStackView.swift in Sources */,
 				385E1221242B214400AAFD1B /* NameTextField.swift in Sources */,
 				38E3E5162428AEDE00B4CA36 /* SignUpTextField.swift in Sources */,
+				385E1224242B338D00AAFD1B /* SignUpNextButton.swift in Sources */,
 				3840F5B0242A7AD2007D3156 /* PWCheckTextField.swift in Sources */,
 				3840F5B3242B11EE007D3156 /* IDStackView.swift in Sources */,
 			);
