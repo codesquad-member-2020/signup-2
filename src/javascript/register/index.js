@@ -3,77 +3,26 @@ import {
   passwordTest,
   passwordCheckTest,
   emailTest,
-  mobilePhoneNumberTest
+  mobilePhoneNumberTest,
+  birthdateTest
 } from "../validation/validation";
-import { SELECT_ELEMENT, SELECT_ELEMENT_ALL } from "../../util/selector";
-
-const caseOfPassword = (result, classList) => {
-  classList.contains("hide") && classList.remove("hide");
-  if (result) {
-    classList.contains("warning") && classList.remove("warning");
-    classList.add("safe");
-    return;
-  }
-  classList.contains("safe") && classList.remove("safe");
-  classList.add("warning");
-};
-
-function withTest(test) {
-  return function(event) {
-    const { target } = event;
-    const [result, message] = test(target.value);
-    const warningMessageElement = SELECT_ELEMENT(
-      `#${target.id}-warning-message`
-    );
-    warningMessageElement.innerHTML = message;
-
-    if (target.id === "password") {
-      caseOfPassword(result, warningMessageElement.classList);
-      return;
-    }
-
-    if (!result && warningMessageElement.classList.contains("hide")) {
-      warningMessageElement.classList.remove("hide");
-      return;
-    }
-
-    if (result && !warningMessageElement.classList.contains("hide")) {
-      warningMessageElement.classList.add("hide");
-    }
-  };
-}
-
-function withTestForTwoElement(selector) {
-  return function(test) {
-    return function(event) {
-      const { target } = event;
-      const password = SELECT_ELEMENT(`#${selector}`).value;
-      const [result, message] = test(target.value, password);
-
-      const warningMessageElement = SELECT_ELEMENT(
-        `#${target.id}-warning-message`
-      );
-      warningMessageElement.innerHTML = message;
-
-      if (!result && warningMessageElement.classList.contains("hide")) {
-        warningMessageElement.classList.remove("hide");
-        return;
-      }
-
-      if (result && !warningMessageElement.classList.contains("hide")) {
-        warningMessageElement.classList.add("hide");
-      }
-    };
-  };
-}
+import { SELECT_ELEMENT } from "../../util/selector";
+import {
+  withTest,
+  withTestAndSelector,
+  withTestAndSelectors
+} from "./enhanceTest";
 
 const idInputWithTest = withTest(idTest);
 const emailInputWithTest = withTest(emailTest);
 const mobilePhoneNumberInputWithTest = withTest(mobilePhoneNumberTest);
 const passwordInputWithTest = withTest(passwordTest);
-const passwordCheckInputWithTest = withTestForTwoElement("password")(
-  passwordCheckTest
+const passwordCheckInputWithTest = withTestAndSelector(passwordCheckTest)(
+  "#password"
 );
+const birthdateCheckInputWithTest = withTestAndSelectors(birthdateTest)(
+  "birthdate"
+)("#year", "#month", "#day");
 
 SELECT_ELEMENT("#id").addEventListener("input", idInputWithTest);
 SELECT_ELEMENT("#email").addEventListener("input", emailInputWithTest);
@@ -86,3 +35,9 @@ SELECT_ELEMENT("#password-check").addEventListener(
   "input",
   passwordCheckInputWithTest
 );
+SELECT_ELEMENT("#year").addEventListener("change", birthdateCheckInputWithTest);
+SELECT_ELEMENT("#month").addEventListener(
+  "change",
+  birthdateCheckInputWithTest
+);
+SELECT_ELEMENT("#day").addEventListener("change", birthdateCheckInputWithTest);
