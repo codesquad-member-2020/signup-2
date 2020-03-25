@@ -6,8 +6,7 @@ export const ALLOWED_PASSWORD_LENGTH_RANGE = [8, 16];
 
 export const VALIDATION_MESSAGE = {
   ID: {
-    NOT_ALLOWED_ID:
-      "아이디는  5~20자의 영 소문자, 숫자, 특수기호로만 이루어져야 합니다",
+    NOT_ALLOWED_ID: " 5~20자 영소대문자, 숫자, 특수기호로 이루어져야 합니다",
     EXISTING_ID: "이미 사용 중인 아이디입니다.",
     SAFE_ID: "사용해도 되는 아이디입니다."
   },
