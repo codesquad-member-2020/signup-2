@@ -16,6 +16,7 @@ class SignUpTextField: UITextField {
     
     static let WrongAlertColor = UIColor(named: "AlertWrong")!
     static let CorrectAlertColor = UIColor(named: "AlertCorrect")!
+    let usersURLString = "https://shrouded-tor-36901.herokuapp.com/api/users/"
     
     override var isHighlighted: Bool {
         didSet {
