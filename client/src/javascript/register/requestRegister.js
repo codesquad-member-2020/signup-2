@@ -36,6 +36,7 @@ const hasSelectedSex = previousResult => {
 
 const printResult = previousResult => {
   console.log(previousResult);
+  console.log("finished");
 };
 
 const composedCheckRequirements = compose(

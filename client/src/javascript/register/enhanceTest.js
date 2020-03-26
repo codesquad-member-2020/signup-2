@@ -1,7 +1,22 @@
 import { SELECT_ELEMENT } from "../../util/selector";
 import { CSS_ID_CLASS } from "../../constants/constants";
+import { idExist } from "../validation/idValidation";
 
 const { REGISTER } = CSS_ID_CLASS;
+
+export const idExistInServer = async e => {
+  const warningMessageElement = SELECT_ELEMENT(`#id-warning-message`);
+  if (!warningMessageElement.classList.contains("hide")) {
+    return;
+  }
+  const { target } = e;
+  const id = target.value;
+  const isValid = await idExist(id);
+  const message = isValid
+    ? "사용해도 괜찮은 아이디입니다."
+    : "이미 존재하는 아이디입니다.";
+  handleTestResult(target, isValid, message);
+};
 
 const caseOfPassword = (result, classList) => {
   classList.contains(REGISTER.HIDE) && classList.remove(REGISTER.HIDE);

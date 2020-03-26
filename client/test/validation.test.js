@@ -5,12 +5,19 @@ const {
   mobilePhoneNumberTest,
   birthdateTest
 } = require("../src/javascript/validation/validation");
+import regeneratorRuntime from "regenerator-runtime";
+const { idExist } = require("../src/javascript/validation/idValidation");
 
 const {
   VALIDATION_MESSAGE: { ID, PASSWORD, EMAIL, MOBILE_PHONE, BIRTHDATE }
 } = require("../src/constants/constants");
 
 describe("id test - 실패 경우", () => {
+  test("id가 존재하는 경우", async () => {
+    const existInServer = await idExist("dingo");
+    expect(existInServer).toEqual(true);
+  });
+
   test("5자리가 안 되는 경우", () => {
     expect(idTest("abc")).toEqual([false, ID.NOT_ALLOWED_ID]);
   });

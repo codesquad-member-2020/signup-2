@@ -10,7 +10,8 @@ import { SELECT_ELEMENT } from "../../util/selector";
 import {
   withTest,
   withTestAndSelector,
-  withTestAndSelectors
+  withTestAndSelectors,
+  idExistInServer
 } from "./enhanceTest";
 import {
   hideModal,
@@ -35,6 +36,7 @@ const birthdateCheckInputWithTest = withTestAndSelectors(birthdateTest)(
 )(`#${REGISTER.YEAR}`, `#${REGISTER.MONTH}`, `#${REGISTER.DAY}`);
 
 SELECT_ELEMENT(`#${REGISTER.ID}`).addEventListener("input", idInputWithTest);
+SELECT_ELEMENT(`#${REGISTER.ID}`).addEventListener("change", idExistInServer);
 SELECT_ELEMENT(`#${REGISTER.EMAIL}`).addEventListener(
   "input",
   emailInputWithTest
@@ -78,7 +80,4 @@ SELECT_ELEMENT(`#${REGISTER.MODAL_BUTTON}`).addEventListener(
   checkAgreementCheckBox
 );
 
-SELECT_ELEMENT(`#register-button`).addEventListener(
-  "click",
-  composedCheckRequirements
-);
+SELECT_ELEMENT(`form`).addEventListener("submit", composedCheckRequirements);
