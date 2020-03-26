@@ -32,6 +32,8 @@ class IdentificationStatusLabel: SignUpStatusLabel {
     }
     
     func configure() {
+        text = "status message"
+        textColor = .clear
         NotificationCenter.default.addObserver(self, selector: #selector(handleStatusChanged), name: SignUpViewModel.IDStatusDidChangeNotification, object: nil)
     }
     

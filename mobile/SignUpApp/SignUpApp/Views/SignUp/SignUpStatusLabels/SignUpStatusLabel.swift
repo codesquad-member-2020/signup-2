@@ -21,12 +21,13 @@ class SignUpStatusLabel: UILabel {
     }
     
     private func configure() {
-        text = ""
+        text = "status message"
+        textColor = .clear
         baselineAdjustment = .none
     }
     
     func updateStatus(isValid: Bool, message: String) {
         text = message
-        textColor = isValid ? SignUpTextField.UnavailableStatusColor : SignUpTextField.AvailableStatusColor
+        textColor = isValid ? SignUpTextField.AvailableStatusColor : SignUpTextField.UnavailableStatusColor
     }
 }
