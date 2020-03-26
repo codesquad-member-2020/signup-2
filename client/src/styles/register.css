@@ -1,6 +1,6 @@
 body {
   background-color: #f8f9fa;
-  font-family: "Nanum Gothic Coding", monospace;
+  font-family: "Noto Sans KR", sans-serif;
 }
 #register {
   align-items: center;
@@ -39,6 +39,7 @@ form > div {
   height: 3rem;
   font-size: 0.8rem;
   font-weight: 700;
+  cursor: pointer;
 }
 
 form label {
@@ -138,6 +139,7 @@ form span {
   height: 60%;
   text-align: justify;
   border: 1px solid #000000;
+  padding: 0.8rem;
 }
 
 #modal-button {
@@ -175,4 +177,15 @@ form span {
 .modal-title {
   font-weight: 500;
   margin-bottom: 3rem;
+}
+
+.dim {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  z-index: 1;
 }

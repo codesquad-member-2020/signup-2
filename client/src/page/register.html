@@ -8,7 +8,7 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap"
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="../styles/reset.css" />
@@ -20,25 +20,27 @@
       <header>
         회원가입
       </header>
-      <form>
+      <form method="POST">
         <div>
           <label for="id">아이디</label>
           <input id="id" />
-          <span class="warning hide" id="id-warning-message"
+          <span class="warning hide status-text" id="id-warning-message"
             >이미 사용중인 아이디입니다.</span
           >
         </div>
         <div>
           <label for="password">비밀번호</label>
           <input id="password" type="password" />
-          <span class="safe hide" id="password-warning-message"
+          <span class="warning hide status-text" id="password-warning-message"
             >안전한 비밀번호입니다.</span
           >
         </div>
         <div>
           <label for="password-check">비밀번호 재확인</label>
           <input id="password-check" type="password" />
-          <span class="warning hide" id="password-check-warning-message"
+          <span
+            class="warning hide status-text"
+            id="password-check-warning-message"
             >비밀번호가 일치하지 않습니다.</span
           >
         </div>
@@ -67,7 +69,7 @@
             </select>
             <input id="day" type="number" maxlength="2" />
           </div>
-          <span class="warning hide" id="birthdate-warning-message"
+          <span class="warning hide status-text" id="birthdate-warning-message"
             >태어난 년도 4자리를 정확하게 입력하세요.</span
           >
         </div>
@@ -82,14 +84,16 @@
         <div>
           <label for="email">이메일</label>
           <input id="email" type="email" />
-          <span class="warning hide" id="email-warning-message"
+          <span class="warning hide status-text" id="email-warning-message"
             >이메일 주소를 다시 확인해주세요.</span
           >
         </div>
         <div>
           <label for="mobile-phone-number">휴대전화</label>
           <input id="mobile-phone-number" />
-          <span class="warning hide" id="mobile-phone-number-warning-message"
+          <span
+            class="warning hide status-text"
+            id="mobile-phone-number-warning-message"
             >형식에 맞지 않는 번호입니다.</span
           >
         </div>
@@ -106,7 +110,7 @@
         </div>
         <div id="buttons">
           <button type="reset" class="valid">초기화</button>
-          <button class="invalid">가입하기</button>
+          <button class="invalid" id="register-button">가입하기</button>
         </div>
       </form>
     </div>
@@ -401,6 +405,7 @@
         <button class="invalid" disabled>동의</button>
       </div>
     </div>
+    <div class="dim"></div>
     <script src="../../dist/bundle.js"></script>
   </body>
 </html>
