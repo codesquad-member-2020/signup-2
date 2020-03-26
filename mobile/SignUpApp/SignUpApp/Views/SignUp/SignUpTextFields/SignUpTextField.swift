@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol SignUpValidationChangedUpdatable {
-    func updateAlertLabel(isValid: Bool)
-}
-
 class SignUpTextField: UITextField {
     
     static let WrongAlertColor = UIColor(named: "AlertWrong")!
@@ -24,8 +20,6 @@ class SignUpTextField: UITextField {
             else { updateTextField(for: isValid) }
         }
     }
-    
-    var validationDelegate: SignUpValidationChangedUpdatable?
     
     var isValid: Bool = false {
         didSet {
@@ -44,7 +38,6 @@ class SignUpTextField: UITextField {
     
     private func updateTextField(for isValid: Bool) {
         borderColor = isValid ? SignUpTextField.CorrectAlertColor : SignUpTextField.WrongAlertColor
-        validationDelegate?.updateAlertLabel(isValid: isValid)
     }
 
     override init(frame: CGRect) {
