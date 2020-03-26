@@ -70,15 +70,9 @@ class SignUpTextField: UITextField {
     }
     
     private func configure() {
-        delegate = self
         layer.borderWidth = 1.5
         layer.cornerRadius = 0
         borderStyle = .none
-        setupNotification()
-    }
-    
-    func setupNotification() {
-        
     }
 }
 

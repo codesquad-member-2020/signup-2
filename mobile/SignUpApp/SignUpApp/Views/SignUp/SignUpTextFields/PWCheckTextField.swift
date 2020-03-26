@@ -12,17 +12,6 @@ class PWCheckTextField: SignUpTextField {
     
     var password: String = ""
     
-    override func setupNotification() {
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(handlePWChanged),
-                                               name: PWTextField.ValidPWDidChangeNotification,
-                                               object: nil)
-    }
-    
-    deinit {
-        NotificationCenter.default.removeObserver(self, name: PWTextField.ValidPWDidChangeNotification, object: nil)
-    }
-    
     @objc private func handlePWChanged(notification: Notification) {
         guard let password = notification.userInfo?["password"] as? String else { return }
         self.password = password

@@ -10,11 +10,6 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
-    @IBOutlet weak var IDStackView: IDStackView!
-    @IBOutlet weak var PWStackView: PWStackView!
-    @IBOutlet weak var PWCheckStackView: PWCheckStackView!
-    @IBOutlet weak var nameStackView: NameStackView!
-    
     @IBOutlet weak var IDTextField: IDTextField!
     @IBOutlet weak var PWTextField: PWTextField!
     @IBOutlet weak var PWCheckTextField: PWCheckTextField!
@@ -22,32 +17,17 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var nextButton: SignUpNextButton!
     
+    let userIDTextFieldDelegate = IDTextFieldDelegate()
+    
+    let signUpViewModel = SignUpViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTextFieldDelegate()
-        setupNextButtonObserverForValidation()
     }
     
     private func setupTextFieldDelegate() {
-        IDTextField.validationDelegate = IDStackView
-        PWTextField.validationDelegate = PWStackView
-        PWCheckTextField.validationDelegate = PWCheckStackView
-        nameTextField.validationDelegate = nameStackView
-    }
-    
-    private func setupNextButtonObserverForValidation() {
-        let textFields = [IDTextField, PWTextField, PWCheckTextField, nameTextField]
-        textFields.forEach {
-            $0?.validationChangedHandler = { isValid in
-                var isNextButtonValid = true
-                textFields.forEach {
-                    guard let textField = $0 else { return }
-                    guard textField.isValid else { isNextButtonValid = false; return }
-                    isNextButtonValid = isNextButtonValid && true
-                }
-                self.nextButton.isValid = isNextButtonValid
-            }
-        }
+        IDTextField.delegate = userIDTextFieldDelegate
     }
 }
