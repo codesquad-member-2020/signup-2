@@ -4,10 +4,12 @@ import { CSS_ID_CLASS } from "../../constants/constants";
 const { REGISTER } = CSS_ID_CLASS;
 export const popUpModal = () => {
   SELECT_ELEMENT(`#${REGISTER.MODAL}`).classList.remove(REGISTER.HIDE);
+  SELECT_ELEMENT(".dim").style.display = "block";
 };
 
 export const hideModal = () => {
   SELECT_ELEMENT(`#${REGISTER.MODAL}`).classList.add(REGISTER.HIDE);
+  SELECT_ELEMENT(".dim").style.display = "none";
 };
 
 export const handleScrollEnd = event => {

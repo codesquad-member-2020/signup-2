@@ -18,6 +18,7 @@ import {
   handleScrollEnd,
   checkAgreementCheckBox
 } from "./modalCallback";
+import composedCheckRequirements from "./requestRegister";
 import { CSS_ID_CLASS } from "../../constants/constants";
 
 const { REGISTER } = CSS_ID_CLASS;
@@ -75,4 +76,9 @@ SELECT_ELEMENT(`#${REGISTER.PRIVACY_AGREEMENT}`).addEventListener(
 SELECT_ELEMENT(`#${REGISTER.MODAL_BUTTON}`).addEventListener(
   "click",
   checkAgreementCheckBox
+);
+
+SELECT_ELEMENT(`#register-button`).addEventListener(
+  "click",
+  composedCheckRequirements
 );
