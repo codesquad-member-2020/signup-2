@@ -21,6 +21,7 @@
 		38BAEACD242D0FE70065A602 /* PasswordTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEACC242D0FE70065A602 /* PasswordTextFieldDelegate.swift */; };
 		38BAEACF242D10020065A602 /* PasswordReconfirmationTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEACE242D10020065A602 /* PasswordReconfirmationTextFieldDelegate.swift */; };
 		38BAEAD1242D101E0065A602 /* NameTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEAD0242D101E0065A602 /* NameTextFieldDelegate.swift */; };
+		38BAEAD3242D11000065A602 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEAD2242D11000065A602 /* User.swift */; };
 		38E3E5162428AEDE00B4CA36 /* SignUpTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E3E5152428AEDE00B4CA36 /* SignUpTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		38BAEACC242D0FE70065A602 /* PasswordTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldDelegate.swift; sourceTree = "<group>"; };
 		38BAEACE242D10020065A602 /* PasswordReconfirmationTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordReconfirmationTextFieldDelegate.swift; sourceTree = "<group>"; };
 		38BAEAD0242D101E0065A602 /* NameTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextFieldDelegate.swift; sourceTree = "<group>"; };
+		38BAEAD2242D11000065A602 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		38E3E5152428AEDE00B4CA36 /* SignUpTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				38BAEAC7242CAEE90065A602 /* NetworkManager.swift */,
+				38BAEAD2242D11000065A602 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38BAEAD3242D11000065A602 /* User.swift in Sources */,
 				38BAEAC8242CAEE90065A602 /* NetworkManager.swift in Sources */,
 				38BAEABE242C80FC0065A602 /* SignUpViewModel.swift in Sources */,
 				386B138024286F4B00E0EA29 /* SignUpViewController.swift in Sources */,
