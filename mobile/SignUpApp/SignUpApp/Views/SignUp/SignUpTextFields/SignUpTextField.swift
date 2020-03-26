@@ -10,34 +10,25 @@ import UIKit
 
 class SignUpTextField: UITextField {
     
-    static let WrongAlertColor = UIColor(named: "AlertWrong")!
-    static let CorrectAlertColor = UIColor(named: "AlertCorrect")!
-    let usersURLString = "https://shrouded-tor-36901.herokuapp.com/api/users/"
+    static let UnavailableStatusColor = UIColor(named: "AlertWrong")!
+    static let AvailableStatusColor = UIColor(named: "AlertCorrect")!
     
     override var isHighlighted: Bool {
         didSet {
-            if isHighlighted { borderColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1) }
-            else { updateTextField(for: isValid) }
+            borderColor = isHighlighted ? #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1) : .darkGray
         }
     }
     
     var isValid: Bool = false {
         didSet {
-            updateTextField(for: isValid)
-            validationChangedHandler?(isValid)
+            borderColor = isValid ? Self.AvailableStatusColor : Self.UnavailableStatusColor
         }
     }
-    
-    var validationChangedHandler: ((Bool) -> Void)?
     
     var borderColor: UIColor = .darkGray {
         didSet {
             layer.borderColor = borderColor.cgColor
         }
-    }
-    
-    private func updateTextField(for isValid: Bool) {
-        borderColor = isValid ? SignUpTextField.CorrectAlertColor : SignUpTextField.WrongAlertColor
     }
 
     override init(frame: CGRect) {

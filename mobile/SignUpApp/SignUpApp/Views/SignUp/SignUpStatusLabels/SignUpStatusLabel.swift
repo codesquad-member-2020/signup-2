@@ -27,6 +27,6 @@ class SignUpStatusLabel: UILabel {
     
     func updateStatus(isValid: Bool, message: String) {
         text = message
-        textColor = isValid ? SignUpTextField.CorrectAlertColor : SignUpTextField.WrongAlertColor
+        textColor = isValid ? SignUpTextField.UnavailableStatusColor : SignUpTextField.AvailableStatusColor
     }
 }
