@@ -27,6 +27,8 @@ class SignUpViewModel {
                 self.isIdentificationValid = isIdentificationValid
                 let status: IdentificationStatusLabel.status = isIdentificationValid ? .available : .duplicated
                 self.postIDStatusNotification(isValid: self.isIdentificationValid, status: status)
+                guard self.evaluate(text: self.identification, with: self.identificationRegex) == false else { return }
+                self.postIDStatusNotification(isValid: false, status: .formError)
             }
             checkValidation()
         }
