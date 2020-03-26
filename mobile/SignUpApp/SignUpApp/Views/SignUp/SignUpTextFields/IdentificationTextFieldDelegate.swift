@@ -8,13 +8,16 @@
 
 import UIKit
 
-class IDTextFieldDelegate: NSObject, UITextFieldDelegate {
+class IdentificationTextFieldDelegate: NSObject, UITextFieldDelegate {
+    
+    var handleTextChanged: ((String) -> Void)?
     
     func textFieldDidChangeSelection(_ textField: UITextField) {
-        print("Changing", textField.text)
+        let estimatedText = textField.text ?? ""
+        handleTextChanged?(estimatedText)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print("END", textField.text)
+//        print("END", textField.text)
     }
 }

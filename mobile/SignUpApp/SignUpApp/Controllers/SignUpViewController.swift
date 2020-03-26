@@ -10,14 +10,16 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
-    @IBOutlet weak var IDTextField: IDTextField!
-    @IBOutlet weak var PWTextField: PWTextField!
-    @IBOutlet weak var PWCheckTextField: PWCheckTextField!
-    @IBOutlet weak var nameTextField: NameTextField!
-    
+    @IBOutlet weak var identificationTextField: SignUpTextField!
+    @IBOutlet weak var passwordTextField: SignUpTextField!
+    @IBOutlet weak var passwordReconfirmationTextField: SignUpTextField!
+    @IBOutlet weak var nameTextField: SignUpTextField!
     @IBOutlet weak var nextButton: SignUpNextButton!
     
-    let userIDTextFieldDelegate = IDTextFieldDelegate()
+    let identificationTextFieldDelegate = IdentificationTextFieldDelegate()
+    let passwordTextFieldDelegate = PasswordTextFieldDelegate()
+    let passwordReconfirmationTextFieldDelegate = PasswordReconfirmationTextFieldDelegate()
+    let nameTextFieldDelegate = NameTextFieldDelegate()
     
     let signUpViewModel = SignUpViewModel()
     
@@ -25,9 +27,34 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         
         setupTextFieldDelegate()
+        
+        signUpViewModel.signUpValidationChangeHandler = { isValid in
+            DispatchQueue.main.async {
+                self.nextButton.isValid = isValid
+            }
+        }
     }
     
     private func setupTextFieldDelegate() {
-        IDTextField.delegate = userIDTextFieldDelegate
+        identificationTextField.delegate = identificationTextFieldDelegate
+        passwordTextField.delegate = passwordTextFieldDelegate
+        passwordReconfirmationTextField.delegate = passwordReconfirmationTextFieldDelegate
+        nameTextField.delegate = nameTextFieldDelegate
+        setupTextFieldDelegateHandler()
+    }
+    
+    private func setupTextFieldDelegateHandler() {
+        identificationTextFieldDelegate.handleTextChanged = { identificaion in
+            self.signUpViewModel.identification = identificaion
+        }
+        passwordTextFieldDelegate.handleTextChanged = { password in
+            self.signUpViewModel.password = password
+        }
+        passwordReconfirmationTextFieldDelegate.handleTextChanged = { passwordReconfirmation in
+            self.signUpViewModel.passwordReconfirmation = passwordReconfirmation
+        }
+        nameTextFieldDelegate.handleTextChanged = { name in
+            self.signUpViewModel.name = name
+        }
     }
 }

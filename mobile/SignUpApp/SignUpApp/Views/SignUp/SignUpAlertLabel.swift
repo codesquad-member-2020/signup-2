@@ -30,10 +30,8 @@ class SignUpAlertLabel: UILabel {
     
     private func configure() {
         text = "signup"
-        textColor = .clear
-        font = .systemFont(ofSize: 12)
-        translatesAutoresizingMaskIntoConstraints = false
-        heightAnchor.constraint(equalToConstant: height).isActive = true
+//        textColor = .clear
+        baselineAdjustment = .none
     }
     
     func upateAlert(isValid: Bool) {

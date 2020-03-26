@@ -46,10 +46,6 @@ class SignUpTextField: UITextField {
         borderColor = isValid ? SignUpTextField.CorrectAlertColor : SignUpTextField.WrongAlertColor
         validationDelegate?.updateAlertLabel(isValid: isValid)
     }
-    
-    func checkValidation(text: String, regex: String) -> Bool {
-        NSPredicate(format: "SELF MATCHES[c] %@", regex).evaluate(with: text)
-    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -73,11 +69,5 @@ class SignUpTextField: UITextField {
         layer.borderWidth = 1.5
         layer.cornerRadius = 0
         borderStyle = .none
-    }
-}
-
-extension SignUpTextField: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        updateTextField(for: isValid)
     }
 }
