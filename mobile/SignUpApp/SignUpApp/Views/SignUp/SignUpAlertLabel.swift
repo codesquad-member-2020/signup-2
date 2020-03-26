@@ -10,32 +10,23 @@ import UIKit
 
 class SignUpAlertLabel: UILabel {
     
-    let wrongMessage: String
-    let correctMessage: String
-    private let height: CGFloat = 20
-    
-    init(wrongMessage: String, correctMessage: String) {
-        self.wrongMessage = wrongMessage
-        self.correctMessage = correctMessage
-        super.init(frame: .zero)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         configure()
     }
     
     required init?(coder: NSCoder) {
-        self.wrongMessage = ""
-        self.correctMessage = ""
         super.init(coder: coder)
         configure()
     }
     
     private func configure() {
-        text = "signup"
-//        textColor = .clear
+        text = ""
         baselineAdjustment = .none
     }
     
-    func upateAlert(isValid: Bool) {
-        text = isValid ? correctMessage : wrongMessage
+    func upateAlertLabel(isValid: Bool, message: String) {
+        text = message
         textColor = isValid ? SignUpTextField.CorrectAlertColor : SignUpTextField.WrongAlertColor
     }
 }
