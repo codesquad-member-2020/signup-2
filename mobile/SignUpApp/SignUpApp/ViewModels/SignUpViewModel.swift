@@ -11,6 +11,7 @@ import UIKit
 class SignUpViewModel {
     
     private let networkManager = NetworkManager()
+    static let ValidationDidChangeNotification = NSNotification.Name("SignUpValidationDidChangeNotification")
     
     var identification: String = "" {
         didSet {
@@ -28,11 +29,11 @@ class SignUpViewModel {
     
     var isValid: Bool = false {
         didSet {
-            signUpValidationChangeHandler?(isValid)
+            DispatchQueue.main.async {
+                NotificationCenter.default.post(name: Self.ValidationDidChangeNotification, object: nil, userInfo: ["isValid": self.isValid])
+            }
         }
     }
-    
-    var signUpValidationChangeHandler: ((Bool) -> Void)?
     
     let identificationRegex: String = "[a-z0-9_\\-]{5,20}"
     let passwordRegex: String = "(?=.*\\d{1,50})(?=.*[~`!@#$%\\^&*()-+=]{1,50})(?=.*[a-z]{1,50})(?=.*[A-Z]{1,50}).{8,16}$"

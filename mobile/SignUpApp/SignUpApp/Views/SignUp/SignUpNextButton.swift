@@ -41,5 +41,22 @@ class SignUpNextButton: UIButton {
         setTitleColor(.lightGray, for: .disabled)
         setTitleColor(keyColor, for: .normal)
         updateButtonStatus()
+        setupNotification()
+    }
+    
+    private func setupNotification() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(handleValidationChanged),
+                                               name: SignUpViewModel.ValidationDidChangeNotification,
+                                               object: nil)
+    }
+    
+    @objc private func handleValidationChanged(notification: Notification) {
+        guard let isValid = notification.userInfo?["isValid"] as? Bool else { return }
+        self.isValid = isValid
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: SignUpViewModel.ValidationDidChangeNotification, object: nil)
     }
 }

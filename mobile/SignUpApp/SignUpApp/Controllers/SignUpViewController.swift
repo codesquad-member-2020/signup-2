@@ -27,12 +27,6 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
         
         setupTextFieldDelegate()
-        
-        signUpViewModel.signUpValidationChangeHandler = { isValid in
-            DispatchQueue.main.async {
-                self.nextButton.isValid = isValid
-            }
-        }
     }
     
     private func setupTextFieldDelegate() {
