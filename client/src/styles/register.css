@@ -2,6 +2,7 @@ body {
   background-color: #f8f9fa;
   font-family: "Noto Sans KR", sans-serif;
 }
+
 #register {
   align-items: center;
   display: flex;
@@ -130,7 +131,6 @@ form span {
 }
 .modal-content {
   height: 70%;
-  padding: 1rem;
 }
 
 #privacy-agreement {

@@ -14,7 +14,7 @@ export const hideModal = () => {
 
 export const handleScrollEnd = event => {
   const { target } = event;
-  if (target.scrollTop + target.clientHeight > target.scrollHeight) {
+  if (target.scrollHeight - target.scrollTop <= target.clientHeight + 1) {
     const agreementButton = SELECT_ELEMENT(`#${REGISTER.MODAL_BUTTON} button`);
     const targetClassList = agreementButton.classList;
     agreementButton.disabled = false;
