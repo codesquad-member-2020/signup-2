@@ -10,7 +10,7 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
-    @IBOutlet weak var identificationTextField: SignUpTextField!
+    @IBOutlet weak var identificationTextField: IdentificationTextField!
     @IBOutlet weak var passwordTextField: SignUpTextField!
     @IBOutlet weak var passwordReconfirmationTextField: SignUpTextField!
     @IBOutlet weak var nameTextField: SignUpTextField!
