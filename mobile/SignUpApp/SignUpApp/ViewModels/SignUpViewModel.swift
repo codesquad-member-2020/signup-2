@@ -15,6 +15,8 @@ class SignUpViewModel {
             if evaluate(text: identification, with: identificationRegex) {
                 isIdentificationValid = true
                 requestIDDuplicationConfirmation(ID: identification)
+            } else {
+                checkValidation()
             }
         }
     }
