@@ -16,10 +16,10 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var nameTextField: SignUpTextField!
     @IBOutlet weak var nextButton: SignUpNextButton!
     
-    let identificationTextFieldDelegate = SignUpTextFieldDelegate()
-    let passwordTextFieldDelegate = SignUpTextFieldDelegate()
-    let passwordReconfirmationTextFieldDelegate = SignUpTextFieldDelegate()
-    let nameTextFieldDelegate = SignUpTextFieldDelegate()
+    let identificationTextFieldDelegate = IdentificationTextFieldDelegate()
+    let passwordTextFieldDelegate = PasswordTextFieldDelegate()
+    let passwordReconfirmationTextFieldDelegate = PasswordReconfirmationTextFieldDelegate()
+    let nameTextFieldDelegate = NameTextFieldDelegate()
     
     let signUpViewModel = SignUpViewModel()
     
@@ -40,21 +40,13 @@ class SignUpViewController: UIViewController {
         passwordTextField.delegate = passwordTextFieldDelegate
         passwordReconfirmationTextField.delegate = passwordReconfirmationTextFieldDelegate
         nameTextField.delegate = nameTextFieldDelegate
-        setupTextFieldDelegateHandler()
+        setupTextFieldDelegateViewModel()
     }
     
-    private func setupTextFieldDelegateHandler() {
-        identificationTextFieldDelegate.handleTextChanged = { identificaion in
-            self.signUpViewModel.identification = identificaion
-        }
-        passwordTextFieldDelegate.handleTextChanged = { password in
-            self.signUpViewModel.password = password
-        }
-        passwordReconfirmationTextFieldDelegate.handleTextChanged = { passwordReconfirmation in
-            self.signUpViewModel.passwordReconfirmation = passwordReconfirmation
-        }
-        nameTextFieldDelegate.handleTextChanged = { name in
-            self.signUpViewModel.name = name
-        }
+    private func setupTextFieldDelegateViewModel() {
+        identificationTextFieldDelegate.signUpViewModel = signUpViewModel
+        passwordTextFieldDelegate.signUpViewModel = signUpViewModel
+        passwordReconfirmationTextFieldDelegate.signUpViewModel = signUpViewModel
+        nameTextFieldDelegate.signUpViewModel = signUpViewModel
     }
 }
