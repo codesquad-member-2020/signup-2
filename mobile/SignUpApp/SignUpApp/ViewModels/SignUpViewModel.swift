@@ -12,12 +12,21 @@ class SignUpViewModel {
     
     private let networkManager = NetworkManager()
     static let ValidationDidChangeNotification = NSNotification.Name("SignUpValidationDidChangeNotification")
+    static let IDStatusDidChangeNotification = NSNotification.Name("IDStatusDidChangeNotification")
+    static let PWStatusDidChangeNotification = NSNotification.Name("PWStatusDidChangeNotification")
+    static let PWReconfirmationStatusDidChangeNotification = NSNotification.Name("PWReconfirmationStatusDidChangeNotification")
+    static let NameDidChangeNotification = NSNotification.Name("NameDidChangeNotification")
     
     var identification: String = "" {
         didSet {
             isIdentificationValid = evaluate(text: identification, with: identificationRegex)
+            let status: IdentificationStatusLabel.status = isIdentificationValid ? .available : .formError
+            postIDStatusNotification(isValid: isIdentificationValid, status: status)
+            guard isIdentificationValid else { return }
             networkManager.requestIDDuplicationConfirmation(ID: identification) { (isIdentificationValid) in
                 self.isIdentificationValid = isIdentificationValid
+                let status: IdentificationStatusLabel.status = isIdentificationValid ? .available : .duplicated
+                self.postIDStatusNotification(isValid: self.isIdentificationValid, status: status)
             }
             checkValidation()
         }
@@ -47,5 +56,11 @@ class SignUpViewModel {
     
     private func evaluate(text: String, with regex: String) -> Bool {
         NSPredicate(format: "SELF MATCHES[c] %@", regex).evaluate(with: text)
+    }
+    
+    private func postIDStatusNotification(isValid: Bool, status: IdentificationStatusLabel.status) {
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: Self.IDStatusDidChangeNotification, object: nil, userInfo: ["isValid": isValid, "status": status])
+        }
     }
 }

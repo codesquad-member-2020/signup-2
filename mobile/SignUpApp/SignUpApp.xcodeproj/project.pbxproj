@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3840F5AC242A402F007D3156 /* SignUpAlertLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840F5AB242A402F007D3156 /* SignUpAlertLabel.swift */; };
+		3840F5AC242A402F007D3156 /* SignUpStatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840F5AB242A402F007D3156 /* SignUpStatusLabel.swift */; };
 		385E1224242B338D00AAFD1B /* SignUpNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385E1223242B338D00AAFD1B /* SignUpNextButton.swift */; };
 		386B137C24286F4B00E0EA29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B137B24286F4B00E0EA29 /* AppDelegate.swift */; };
 		386B137E24286F4B00E0EA29 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B137D24286F4B00E0EA29 /* SceneDelegate.swift */; };
@@ -22,11 +22,12 @@
 		38BAEACF242D10020065A602 /* PasswordReconfirmationTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEACE242D10020065A602 /* PasswordReconfirmationTextFieldDelegate.swift */; };
 		38BAEAD1242D101E0065A602 /* NameTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEAD0242D101E0065A602 /* NameTextFieldDelegate.swift */; };
 		38BAEAD3242D11000065A602 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEAD2242D11000065A602 /* User.swift */; };
+		38BAEAD6242D1A7F0065A602 /* IdentificationStatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEAD5242D1A7F0065A602 /* IdentificationStatusLabel.swift */; };
 		38E3E5162428AEDE00B4CA36 /* SignUpTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E3E5152428AEDE00B4CA36 /* SignUpTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3840F5AB242A402F007D3156 /* SignUpAlertLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpAlertLabel.swift; sourceTree = "<group>"; };
+		3840F5AB242A402F007D3156 /* SignUpStatusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStatusLabel.swift; sourceTree = "<group>"; };
 		385E1223242B338D00AAFD1B /* SignUpNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNextButton.swift; sourceTree = "<group>"; };
 		386B137824286F4B00E0EA29 /* SignUpApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUpApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386B137B24286F4B00E0EA29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +44,7 @@
 		38BAEACE242D10020065A602 /* PasswordReconfirmationTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordReconfirmationTextFieldDelegate.swift; sourceTree = "<group>"; };
 		38BAEAD0242D101E0065A602 /* NameTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextFieldDelegate.swift; sourceTree = "<group>"; };
 		38BAEAD2242D11000065A602 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		38BAEAD5242D1A7F0065A602 /* IdentificationStatusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentificationStatusLabel.swift; sourceTree = "<group>"; };
 		38E3E5152428AEDE00B4CA36 /* SignUpTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,8 +120,8 @@
 		3873AD10242A30BF0089F9E8 /* SignUpTextFields */ = {
 			isa = PBXGroup;
 			children = (
-				38BAEAC9242D0F260065A602 /* Delegates */,
 				38E3E5152428AEDE00B4CA36 /* SignUpTextField.swift */,
+				38BAEAC9242D0F260065A602 /* Delegates */,
 			);
 			path = SignUpTextFields;
 			sourceTree = "<group>";
@@ -127,8 +129,8 @@
 		389A39D02429089D00207331 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				38BAEAD4242D1A6A0065A602 /* SignUpStatusLabels */,
 				3873AD10242A30BF0089F9E8 /* SignUpTextFields */,
-				3840F5AB242A402F007D3156 /* SignUpAlertLabel.swift */,
 				385E1223242B338D00AAFD1B /* SignUpNextButton.swift */,
 			);
 			path = SignUp;
@@ -151,6 +153,15 @@
 				38BAEAD0242D101E0065A602 /* NameTextFieldDelegate.swift */,
 			);
 			path = Delegates;
+			sourceTree = "<group>";
+		};
+		38BAEAD4242D1A6A0065A602 /* SignUpStatusLabels */ = {
+			isa = PBXGroup;
+			children = (
+				3840F5AB242A402F007D3156 /* SignUpStatusLabel.swift */,
+				38BAEAD5242D1A7F0065A602 /* IdentificationStatusLabel.swift */,
+			);
+			path = SignUpStatusLabels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,7 +243,8 @@
 				38BAEACD242D0FE70065A602 /* PasswordTextFieldDelegate.swift in Sources */,
 				386B137C24286F4B00E0EA29 /* AppDelegate.swift in Sources */,
 				386B137E24286F4B00E0EA29 /* SceneDelegate.swift in Sources */,
-				3840F5AC242A402F007D3156 /* SignUpAlertLabel.swift in Sources */,
+				38BAEAD6242D1A7F0065A602 /* IdentificationStatusLabel.swift in Sources */,
+				3840F5AC242A402F007D3156 /* SignUpStatusLabel.swift in Sources */,
 				38E3E5162428AEDE00B4CA36 /* SignUpTextField.swift in Sources */,
 				38BAEACB242D0FCF0065A602 /* IdentificationTextFieldDelegate.swift in Sources */,
 				38BAEAD1242D101E0065A602 /* NameTextFieldDelegate.swift in Sources */,

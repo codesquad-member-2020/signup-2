@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpAlertLabel: UILabel {
+class SignUpStatusLabel: UILabel {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,7 +25,7 @@ class SignUpAlertLabel: UILabel {
         baselineAdjustment = .none
     }
     
-    func upateAlertLabel(isValid: Bool, message: String) {
+    func updateStatus(isValid: Bool, message: String) {
         text = message
         textColor = isValid ? SignUpTextField.CorrectAlertColor : SignUpTextField.WrongAlertColor
     }

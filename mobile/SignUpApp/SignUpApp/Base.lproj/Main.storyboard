@@ -49,7 +49,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" textContentType="username"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kp-8r-OAN" customClass="SignUpAlertLabel" customModule="SignUpApp" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kp-8r-OAN" customClass="IdentificationStatusLabel" customModule="SignUpApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="62" width="334" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="E0H-iM-JXM"/>
@@ -81,7 +81,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPR-qH-psj" customClass="SignUpAlertLabel" customModule="SignUpApp" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPR-qH-psj" customClass="SignUpStatusLabel" customModule="SignUpApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="62" width="334" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="bQ2-mg-MUw"/>
@@ -113,7 +113,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XW-Cf-baR" customClass="SignUpAlertLabel" customModule="SignUpApp" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XW-Cf-baR" customClass="SignUpStatusLabel" customModule="SignUpApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="62" width="334" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="8aA-G9-7hb"/>
@@ -145,7 +145,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUN-U9-gem" customClass="SignUpAlertLabel" customModule="SignUpApp" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alert Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UUN-U9-gem" customClass="SignUpStatusLabel" customModule="SignUpApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="62" width="334" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="pF1-T7-OgV"/>
