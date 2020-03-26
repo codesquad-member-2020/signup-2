@@ -10,14 +10,15 @@ import UIKit
 
 class SignUpViewModel {
     
+    private let networkManager = NetworkManager()
+    
     var identification: String = "" {
         didSet {
-            if evaluate(text: identification, with: identificationRegex) {
-                isIdentificationValid = true
-                requestIDDuplicationConfirmation(ID: identification)
-            } else {
-                checkValidation()
+            isIdentificationValid = evaluate(text: identification, with: identificationRegex)
+            networkManager.requestIDDuplicationConfirmation(ID: identification) { (isIdentificationValid) in
+                self.isIdentificationValid = isIdentificationValid
             }
+            checkValidation()
         }
     }
     var password: String = "" { didSet { checkValidation() } }
@@ -45,26 +46,5 @@ class SignUpViewModel {
     
     private func evaluate(text: String, with regex: String) -> Bool {
         NSPredicate(format: "SELF MATCHES[c] %@", regex).evaluate(with: text)
-    }
-    
-    private let usersURLString = "https://shrouded-tor-36901.herokuapp.com/api/users/"
-    private let duplicatedCode: Int = 200
-    private let notDuplicatedCode: Int = 204
-    private let type = "accountId"
-    
-    func requestIDDuplicationConfirmation(ID value: String) {
-        guard let url = URL(string: "\(usersURLString)/signup-check?type=\(type)&value=\(value)") else { return }
-        let request = URLRequest(url: url)
-        URLSession.shared.dataTask(with: request) { (data, response, err) in
-            if let err = err {
-                print(err)
-            }
-            guard let response = response as? HTTPURLResponse else { return }
-            if response.statusCode == self.duplicatedCode {
-                self.isIdentificationValid = false
-            } else if response.statusCode == self.notDuplicatedCode {
-                self.isIdentificationValid = true
-            }
-        }.resume()
     }
 }
