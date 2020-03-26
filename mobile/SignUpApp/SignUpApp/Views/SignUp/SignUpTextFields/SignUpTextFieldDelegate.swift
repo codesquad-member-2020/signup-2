@@ -1,5 +1,5 @@
 //
-//  PasswordTextFieldDelegate.swift
+//  SignUpTextFieldDelegate.swift
 //  SignUpApp
 //
 //  Created by Cory Kim on 2020/03/26.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PasswordTextFieldDelegate: NSObject, UITextFieldDelegate {
+class SignUpTextFieldDelegate: NSObject, UITextFieldDelegate {
     
     var handleTextChanged: ((String) -> Void)?
     
@@ -16,8 +16,5 @@ class PasswordTextFieldDelegate: NSObject, UITextFieldDelegate {
         let estimatedText = textField.text ?? ""
         handleTextChanged?(estimatedText)
     }
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-//        print("END", textField.text)
-    }
 }
+

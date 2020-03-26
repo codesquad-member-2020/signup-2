@@ -15,11 +15,8 @@
 		386B138324286F4B00E0EA29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386B138124286F4B00E0EA29 /* Main.storyboard */; };
 		386B138524286F4C00E0EA29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 386B138424286F4C00E0EA29 /* Assets.xcassets */; };
 		386B138824286F4C00E0EA29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386B138624286F4C00E0EA29 /* LaunchScreen.storyboard */; };
-		38BAEABB242C7FE70065A602 /* IdentificationTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEABA242C7FE70065A602 /* IdentificationTextFieldDelegate.swift */; };
 		38BAEABE242C80FC0065A602 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEABD242C80FC0065A602 /* SignUpViewModel.swift */; };
-		38BAEAC0242C987D0065A602 /* PasswordTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEABF242C987D0065A602 /* PasswordTextFieldDelegate.swift */; };
-		38BAEAC2242C99530065A602 /* PasswordReconfirmationTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEAC1242C99530065A602 /* PasswordReconfirmationTextFieldDelegate.swift */; };
-		38BAEAC4242C99830065A602 /* NameTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEAC3242C99830065A602 /* NameTextFieldDelegate.swift */; };
+		38BAEAC6242CAB200065A602 /* SignUpTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEAC5242CAB200065A602 /* SignUpTextFieldDelegate.swift */; };
 		38E3E5162428AEDE00B4CA36 /* SignUpTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E3E5152428AEDE00B4CA36 /* SignUpTextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -34,11 +31,8 @@
 		386B138424286F4C00E0EA29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		386B138724286F4C00E0EA29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		386B138924286F4C00E0EA29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38BAEABA242C7FE70065A602 /* IdentificationTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentificationTextFieldDelegate.swift; sourceTree = "<group>"; };
 		38BAEABD242C80FC0065A602 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		38BAEABF242C987D0065A602 /* PasswordTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextFieldDelegate.swift; sourceTree = "<group>"; };
-		38BAEAC1242C99530065A602 /* PasswordReconfirmationTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordReconfirmationTextFieldDelegate.swift; sourceTree = "<group>"; };
-		38BAEAC3242C99830065A602 /* NameTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextFieldDelegate.swift; sourceTree = "<group>"; };
+		38BAEAC5242CAB200065A602 /* SignUpTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextFieldDelegate.swift; sourceTree = "<group>"; };
 		38E3E5152428AEDE00B4CA36 /* SignUpTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,10 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				38E3E5152428AEDE00B4CA36 /* SignUpTextField.swift */,
-				38BAEABA242C7FE70065A602 /* IdentificationTextFieldDelegate.swift */,
-				38BAEABF242C987D0065A602 /* PasswordTextFieldDelegate.swift */,
-				38BAEAC1242C99530065A602 /* PasswordReconfirmationTextFieldDelegate.swift */,
-				38BAEAC3242C99830065A602 /* NameTextFieldDelegate.swift */,
+				38BAEAC5242CAB200065A602 /* SignUpTextFieldDelegate.swift */,
 			);
 			path = SignUpTextFields;
 			sourceTree = "<group>";
@@ -212,15 +203,12 @@
 			files = (
 				38BAEABE242C80FC0065A602 /* SignUpViewModel.swift in Sources */,
 				386B138024286F4B00E0EA29 /* SignUpViewController.swift in Sources */,
-				38BAEAC4242C99830065A602 /* NameTextFieldDelegate.swift in Sources */,
 				386B137C24286F4B00E0EA29 /* AppDelegate.swift in Sources */,
-				38BAEABB242C7FE70065A602 /* IdentificationTextFieldDelegate.swift in Sources */,
-				38BAEAC2242C99530065A602 /* PasswordReconfirmationTextFieldDelegate.swift in Sources */,
+				38BAEAC6242CAB200065A602 /* SignUpTextFieldDelegate.swift in Sources */,
 				386B137E24286F4B00E0EA29 /* SceneDelegate.swift in Sources */,
 				3840F5AC242A402F007D3156 /* SignUpAlertLabel.swift in Sources */,
 				38E3E5162428AEDE00B4CA36 /* SignUpTextField.swift in Sources */,
 				385E1224242B338D00AAFD1B /* SignUpNextButton.swift in Sources */,
-				38BAEAC0242C987D0065A602 /* PasswordTextFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

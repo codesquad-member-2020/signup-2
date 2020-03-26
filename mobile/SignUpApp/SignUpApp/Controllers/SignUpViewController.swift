@@ -16,10 +16,10 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var nameTextField: SignUpTextField!
     @IBOutlet weak var nextButton: SignUpNextButton!
     
-    let identificationTextFieldDelegate = IdentificationTextFieldDelegate()
-    let passwordTextFieldDelegate = PasswordTextFieldDelegate()
-    let passwordReconfirmationTextFieldDelegate = PasswordReconfirmationTextFieldDelegate()
-    let nameTextFieldDelegate = NameTextFieldDelegate()
+    let identificationTextFieldDelegate = SignUpTextFieldDelegate()
+    let passwordTextFieldDelegate = SignUpTextFieldDelegate()
+    let passwordReconfirmationTextFieldDelegate = SignUpTextFieldDelegate()
+    let nameTextFieldDelegate = SignUpTextFieldDelegate()
     
     let signUpViewModel = SignUpViewModel()
     
