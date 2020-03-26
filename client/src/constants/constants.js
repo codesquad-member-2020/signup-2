@@ -62,6 +62,15 @@ export const CSS_ID_CLASS = {
     MONTH: "month",
     DAY: "day",
     ID: "id",
-    MOBILE_PHONE_NUMBER: "mobile-phone-number"
+    MODAL: "modal",
+    MOBILE_PHONE_NUMBER: "mobile-phone-number",
+    AGREEMENT: "agreement",
+    MODAL_CLOSE: "modal-close",
+    PRIVACY_AGREEMENT: "privacy-agreement",
+    MODAL_BUTTON: "modal-button",
+    VALID: "valid",
+    INVALID: "invalid",
+    MODAL_BUTTON: "modal-button",
+    AGREEMENT_CHECKBOX: "agreement-checkbox"
   }
 };

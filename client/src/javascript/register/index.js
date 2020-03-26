@@ -12,6 +12,12 @@ import {
   withTestAndSelector,
   withTestAndSelectors
 } from "./enhanceTest";
+import {
+  hideModal,
+  popUpModal,
+  handleScrollEnd,
+  checkAgreementCheckBox
+} from "./modalCallback";
 import { CSS_ID_CLASS } from "../../constants/constants";
 
 const { REGISTER } = CSS_ID_CLASS;
@@ -55,4 +61,18 @@ SELECT_ELEMENT(`#${REGISTER.MONTH}`).addEventListener(
 SELECT_ELEMENT(`#${REGISTER.DAY}`).addEventListener(
   "change",
   birthdateCheckInputWithTest
+);
+
+SELECT_ELEMENT(`#${REGISTER.AGREEMENT}`).addEventListener("click", popUpModal);
+
+SELECT_ELEMENT(`.${REGISTER.MODAL_CLOSE}`).addEventListener("click", hideModal);
+
+SELECT_ELEMENT(`#${REGISTER.PRIVACY_AGREEMENT}`).addEventListener(
+  "scroll",
+  handleScrollEnd
+);
+
+SELECT_ELEMENT(`#${REGISTER.MODAL_BUTTON}`).addEventListener(
+  "click",
+  checkAgreementCheckBox
 );

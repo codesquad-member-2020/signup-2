@@ -102,11 +102,11 @@
         </div>
         <div id="agreement">
           <span>약관에 동의합니다.</span>
-          <input type="checkbox" disabled />
+          <input id="agreement-checkbox" type="checkbox" disabled />
         </div>
         <div id="buttons">
-          <button>초기화</button>
-          <button>가입하기</button>
+          <button type="reset" class="valid">초기화</button>
+          <button class="invalid">가입하기</button>
         </div>
       </form>
     </div>
@@ -398,7 +398,7 @@
         </p>
       </div>
       <div id="modal-button">
-        <button>동의</button>
+        <button class="invalid">동의</button>
       </div>
     </div>
     <script src="../../dist/bundle.js"></script>

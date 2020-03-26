@@ -10,7 +10,7 @@ body {
 }
 
 header {
-  color: #03cf5d;
+  color: #0175d6;
   font-weight: 700;
   font-size: 2rem;
   margin: 3rem 0;
@@ -37,8 +37,6 @@ form > div {
 #buttons > button {
   width: 48%;
   height: 3rem;
-  background-color: #08a600;
-  color: #ffffff;
   font-size: 0.8rem;
   font-weight: 700;
 }
@@ -107,6 +105,10 @@ form span {
   text-decoration: underline;
 }
 
+#agreement span {
+  cursor: pointer;
+}
+
 .center {
   left: 50%;
   transform: translate(-50%, 30vh);
@@ -147,10 +149,19 @@ form span {
 #modal-button button {
   width: 30%;
   height: 2rem;
-  background-color: #08a600;
-  color: #ffffff;
   font-size: 0.8rem;
   font-weight: 700;
+  cursor: pointer;
+}
+
+.invalid {
+  background-color: rgba(1, 117, 214, 0.5);
+  color: #ffffff;
+}
+
+.valid {
+  background-color: rgba(1, 117, 214, 1);
+  color: #ffffff;
 }
 
 .modal-close {
@@ -158,6 +169,7 @@ form span {
   flex-direction: row;
   justify-content: flex-end;
   width: 98%;
+  cursor: pointer;
 }
 
 .modal-title {
