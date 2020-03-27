@@ -21,6 +21,7 @@
 		3834BFE2242DDA14001C0C4A /* GenderSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3834BFE1242DDA14001C0C4A /* GenderSegmentedControl.swift */; };
 		3834BFE4242DDE1E001C0C4A /* PersonalInfoNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3834BFE3242DDE1E001C0C4A /* PersonalInfoNextButton.swift */; };
 		3834BFE6242DDEEA001C0C4A /* PersonalInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3834BFE5242DDEEA001C0C4A /* PersonalInfoButton.swift */; };
+		3834BFE8242DE290001C0C4A /* TermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3834BFE7242DE290001C0C4A /* TermsViewController.swift */; };
 		3840F5AC242A402F007D3156 /* SignUpStatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840F5AB242A402F007D3156 /* SignUpStatusLabel.swift */; };
 		385E1224242B338D00AAFD1B /* SignUpNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385E1223242B338D00AAFD1B /* SignUpNextButton.swift */; };
 		386B137C24286F4B00E0EA29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B137B24286F4B00E0EA29 /* AppDelegate.swift */; };
@@ -62,6 +63,7 @@
 		3834BFE1242DDA14001C0C4A /* GenderSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSegmentedControl.swift; sourceTree = "<group>"; };
 		3834BFE3242DDE1E001C0C4A /* PersonalInfoNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoNextButton.swift; sourceTree = "<group>"; };
 		3834BFE5242DDEEA001C0C4A /* PersonalInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoButton.swift; sourceTree = "<group>"; };
+		3834BFE7242DE290001C0C4A /* TermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsViewController.swift; sourceTree = "<group>"; };
 		3840F5AB242A402F007D3156 /* SignUpStatusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStatusLabel.swift; sourceTree = "<group>"; };
 		385E1223242B338D00AAFD1B /* SignUpNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNextButton.swift; sourceTree = "<group>"; };
 		386B137824286F4B00E0EA29 /* SignUpApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUpApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +184,7 @@
 			children = (
 				386B137F24286F4B00E0EA29 /* SignUpViewController.swift */,
 				3834BFC4242DAC6E001C0C4A /* PersonalInfoViewController.swift */,
+				3834BFE7242DE290001C0C4A /* TermsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				386B137E24286F4B00E0EA29 /* SceneDelegate.swift in Sources */,
 				3834BFD7242DD29B001C0C4A /* PhoneTextFieldDelegate.swift in Sources */,
 				38BAEAD6242D1A7F0065A602 /* IdentificationStatusLabel.swift in Sources */,
+				3834BFE8242DE290001C0C4A /* TermsViewController.swift in Sources */,
 				3834BFE4242DDE1E001C0C4A /* PersonalInfoNextButton.swift in Sources */,
 				3840F5AC242A402F007D3156 /* SignUpStatusLabel.swift in Sources */,
 				38E3E5162428AEDE00B4CA36 /* SignUpTextField.swift in Sources */,
