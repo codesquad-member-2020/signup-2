@@ -24,7 +24,7 @@ public class AuthController {
         User origin = userRepository.findByAccountId(candidate.getAccountId());
 
         if (origin == null) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("user not found");
         }
 
         try {
@@ -35,7 +35,7 @@ public class AuthController {
 
             return ResponseEntity.accepted().build();
         } catch (UnauthorizedException e) {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
         }
     }
 }
