@@ -1,5 +1,5 @@
 //
-//  IdentificationStatusLabel.swift
+//  PasswordReconfirmationStatusLabel.swift
 //  SignUpApp
 //
 //  Created by Cory Kim on 2020/03/27.
@@ -8,12 +8,11 @@
 
 import UIKit
 
-class IdentificationStatusLabel: SignUpStatusLabel {
+class PasswordReconfirmationStatusLabel: SignUpStatusLabel {
     
     enum status: String {
-        case formError = "잘못된 아이디 형식입니다."
-        case duplicated = "이미 사용중인 아이디입니다."
-        case available = "사용 가능한 아이디입니다."
+        case unavailable = "비밀번호가 일치하지 않습니다."
+        case available = "비밀번호가 일치합니다."
         
         func message() -> String {
             return self.rawValue
@@ -33,7 +32,7 @@ class IdentificationStatusLabel: SignUpStatusLabel {
     func configure() {
         text = "status message"
         textColor = .clear
-        NotificationCenter.default.addObserver(self, selector: #selector(handleStatusChanged), name: SignUpViewModel.IDStatusDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleStatusChanged), name: SignUpViewModel.PWReconfirmationStatusDidChangeNotification, object: nil)
     }
     
     @objc private func handleStatusChanged(notification: Notification) {
@@ -42,6 +41,6 @@ class IdentificationStatusLabel: SignUpStatusLabel {
     }
     
     deinit {
-        NotificationCenter.default.removeObserver(self, name: SignUpViewModel.IDStatusDidChangeNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: SignUpViewModel.PWReconfirmationStatusDidChangeNotification, object: nil)
     }
 }

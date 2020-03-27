@@ -31,28 +31,25 @@ class SignUpViewModel {
                 self.isIdentificationValid = false
                 self.postIDStatusNotification(isValid: false, status: .formError)
             }
-            checkValidation()
         }
     }
     var password: String = "" {
         didSet {
             isPasswordValid = evaluate(text: password, with: passwordRegex)
-            postPWStatusNotification(isValid: isPasswordValid, status: .available)
-            checkValidation()
+            let status: PasswordStatusLabel.status = isPasswordValid ? .available : .formError
+            postPWStatusNotification(isValid: isPasswordValid, status: status)
         }
     }
     var passwordReconfirmation: String = "" {
         didSet {
-            isPasswordReconfirmationValid = passwordReconfirmation == password
-            postPWReconfirmationStatusNotification(isValid: isPasswordReconfirmationValid, status: .available)
-            checkValidation()
+            isPasswordReconfirmationValid = (passwordReconfirmation == password) && (passwordReconfirmation != "")
+            postPWReconfirmationStatusNotification(isValid: isPasswordReconfirmationValid)
         }
     }
     var name: String = "" {
         didSet {
             isNameValid = name != ""
-            postNameStatusNotification(isValid: isNameValid, status: .available)
-            checkValidation()
+            postNameStatusNotification(isValid: isNameValid)
         }
     }
     
@@ -86,19 +83,21 @@ class SignUpViewModel {
         }
     }
     
-    private func postPWStatusNotification(isValid: Bool, status: IdentificationStatusLabel.status) {
+    private func postPWStatusNotification(isValid: Bool, status: PasswordStatusLabel.status) {
         DispatchQueue.main.async {
             NotificationCenter.default.post(name: Self.PWStatusDidChangeNotification, object: nil, userInfo: ["isValid": isValid, "status": status])
         }
     }
     
-    private func postPWReconfirmationStatusNotification(isValid: Bool, status: IdentificationStatusLabel.status) {
+    private func postPWReconfirmationStatusNotification(isValid: Bool) {
+        let status: PasswordReconfirmationStatusLabel.status = isValid ? .available : .unavailable
         DispatchQueue.main.async {
             NotificationCenter.default.post(name: Self.PWReconfirmationStatusDidChangeNotification, object: nil, userInfo: ["isValid": isValid, "status": status])
         }
     }
     
-    private func postNameStatusNotification(isValid: Bool, status: IdentificationStatusLabel.status) {
+    private func postNameStatusNotification(isValid: Bool) {
+        let status: NameStatusLabel.status = isValid ? .available : .unavailable
         DispatchQueue.main.async {
             NotificationCenter.default.post(name: Self.NameStatusDidChangeNotification, object: nil, userInfo: ["isValid": isValid, "status": status])
         }
