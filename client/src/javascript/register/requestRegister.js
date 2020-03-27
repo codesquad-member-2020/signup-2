@@ -73,7 +73,7 @@ const registerUser = async previousResult => {
       data: formBody
     });
     if (result.status === 201) {
-      window.location.href = "http://localhost:5500/src/page/login.html";
+      window.location.href = "http://127.0.0.1:5500/client/src/page/login.html";
     } else {
       alert("실패했습니다.");
     }
