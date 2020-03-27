@@ -39,7 +39,7 @@ export const VALIDATION_MESSAGE = {
   }
 };
 
-export const VALIDATION_REGULAR_EXPRESSION = {
+export const VALIDATION_REG = {
   //출처: https://hee-kkk.tistory.com/22 [개발, 개발 누가 말했나]
   AT_LEAST_ONE_NUMBER: /[0-9]/g,
   AT_LEAST_ONE_ENGLISH_LETTER: /[a-zA-z]/gi,
@@ -73,4 +73,19 @@ export const CSS_ID_CLASS = {
     MODAL_BUTTON: "modal-button",
     AGREEMENT_CHECKBOX: "agreement-checkbox"
   }
+};
+
+export const API = {
+  LOGIN: "api/auth/login",
+  REGISTER_USER: "api/users",
+  LOOK_UP_USER: id => `api/users/signup-check?type=accountId&value=${id}`
+};
+
+export const STATUS_CODE = {
+  ID_EXIST: 200,
+  ID_NOT_EXIST: 204,
+  SUCCESSFULLY_CREATED_USER: 201,
+  FAILED_CREATING_USER: 500,
+  LOGIN_SUCCESS: 202,
+  PASSWORD_NOT_MATCHED: 401
 };

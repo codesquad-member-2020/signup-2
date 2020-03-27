@@ -1,7 +1,7 @@
 import compose from "../../util/compose";
 import {
   VALIDATION_MESSAGE,
-  VALIDATION_REGULAR_EXPRESSION,
+  VALIDATION_REG,
   ALLOWED_PASSWORD_LENGTH_RANGE
 } from "../../constants/constants";
 
@@ -20,9 +20,7 @@ const checkPasswordNumber = result => {
   if (!passedTest) {
     return result;
   }
-  const checkNumber = password.search(
-    VALIDATION_REGULAR_EXPRESSION.AT_LEAST_ONE_NUMBER
-  );
+  const checkNumber = password.search(VALIDATION_REG.AT_LEAST_ONE_NUMBER);
   if (checkNumber < 0) {
     return [password, false, PASSWORD.AT_LEAST_ONE_NUMBER];
   }
@@ -35,7 +33,7 @@ const checkPasswordEnglish = result => {
     return result;
   }
   const checkEnglish = password.search(
-    VALIDATION_REGULAR_EXPRESSION.AT_LEAST_ONE_ENGLISH_LETTER
+    VALIDATION_REG.AT_LEAST_ONE_ENGLISH_LETTER
   );
   if (checkEnglish < 0) {
     return [password, false, PASSWORD.AT_LEAST_ONE_ENGLISH_LETTER];
@@ -49,7 +47,7 @@ const checkPasswordSpecialLetter = result => {
     return result;
   }
   const checkSpecialLetter = password.search(
-    VALIDATION_REGULAR_EXPRESSION.AT_LEAST_ONE_SPECAIL_CASE
+    VALIDATION_REG.AT_LEAST_ONE_SPECAIL_CASE
   );
   if (checkSpecialLetter < 0) {
     return [password, false, PASSWORD.AT_LEAST_ONE_SPECIAL_LETTER];

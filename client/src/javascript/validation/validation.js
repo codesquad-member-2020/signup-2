@@ -1,7 +1,4 @@
-import {
-  VALIDATION_MESSAGE,
-  VALIDATION_REGULAR_EXPRESSION
-} from "../../constants/constants";
+import { VALIDATION_MESSAGE, VALIDATION_REG } from "../../constants/constants";
 import composedPasswordTest from "./passwordTest";
 import composedMobilePhoneTest from "./mobilePhoneTest";
 import composedBirthdateTest from "./birthdateTest";
@@ -21,7 +18,7 @@ export const passwordCheckTest = (password, targetPassword) => {
 };
 
 export const idTest = id => {
-  const result = VALIDATION_REGULAR_EXPRESSION.ID_RULE.test(id);
+  const result = VALIDATION_REG.ID_RULE.test(id);
   if (result) {
     return [true, ID.SAFE_ID];
   }
@@ -29,7 +26,7 @@ export const idTest = id => {
 };
 
 export const emailTest = email => {
-  const result = VALIDATION_REGULAR_EXPRESSION.EMAIL_RULE.test(email);
+  const result = VALIDATION_REG.EMAIL_RULE.test(email);
   if (result) {
     return [true, EMAIL.SAFE_EMAIL];
   }

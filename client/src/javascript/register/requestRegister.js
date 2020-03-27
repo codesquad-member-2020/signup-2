@@ -1,17 +1,8 @@
 import { SELECT_ELEMENT, SELECT_ELEMENT_ALL } from "../../util/selector";
 import axios from "axios";
 import compose from "../../util/compose";
-
-const makeFormBody = data => {
-  let formBody = [];
-  for (let property in data) {
-    let encodedKey = encodeURIComponent(property);
-    let encodedValue = encodeURIComponent(data[property]);
-    formBody.push(encodedKey + "=" + encodedValue);
-  }
-  formBody = formBody.join("&");
-  return formBody;
-};
+import { API } from "../../constants/constants";
+import makeFormBody from "../../util/formBody";
 
 const hasFulfilledRequirements = e => {
   e.preventDefault();
@@ -62,23 +53,20 @@ const registerUser = async previousResult => {
     email: SELECT_ELEMENT("#email").value,
     phoneNumber: SELECT_ELEMENT("#mobile-phone-number").value
   };
+
   const formBody = makeFormBody(data);
   try {
     const result = await axios({
       method: "post",
-      url: "https://shrouded-tor-36901.herokuapp.com/api/users",
+      url: API.REGISTER_USER,
       headers: {
         "Content-type": "application/x-www-form-urlencoded"
       },
       data: formBody
     });
-    if (result.status === 201) {
-      window.location.href = "http://127.0.0.1:5500/client/src/page/login.html";
-    } else {
-      alert("실패했습니다.");
-    }
+    window.location.href = "/login.html";
   } catch (error) {
-    console.error(error);
+    alert("회원 가입에 실패했습니다.");
   }
 };
 
