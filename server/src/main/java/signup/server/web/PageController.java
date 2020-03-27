@@ -11,4 +11,10 @@ public class PageController {
         return "home";
     }
 
+
+    @GetMapping("info")
+    public String info() {
+        return "info";
+    }
+
 }

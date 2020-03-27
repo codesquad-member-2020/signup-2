@@ -36,12 +36,14 @@ public class UserController {
     @PostMapping
     public ResponseEntity<String> signup(User user) {
         try {
-            userRepository.save(user);
+            System.out.println(user);
+            User saved = userRepository.save(user);
+            System.out.println(saved);
             URI uri = URI.create("/");
             return ResponseEntity.created(uri).build();
         } catch (Exception e) {
             logger.info(e.getMessage());
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(user + e.getMessage());
         }
     }
 
