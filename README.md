@@ -4,6 +4,12 @@
 
 <br>
 
+> 배포주소
+
+https://shrouded-tor-36901.herokuapp.com/
+
+<br>
+
 > 기획서
 
 - [구글 스프레드 시트](https://docs.google.com/spreadsheets/d/18wkcwvlyeMK_rjO4QET6u6DbwrLv0mkr3JGO4dSn8q8/edit#gid=0)
