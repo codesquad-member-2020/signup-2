@@ -10,6 +10,8 @@ import UIKit
 
 class BirthDateTextField: UITextField {
     
+    var personalInfoViewModel: PersonalInfoViewModel?
+    
     let datePicker = UIDatePicker()
     let accessoryView: UIView = {
         let view = UIView()
@@ -89,7 +91,9 @@ class BirthDateTextField: UITextField {
     
     @objc private func handleSelect() {
         let date = datePicker.date
+        personalInfoViewModel?.birthDate = date
         text = dateFormatter.string(from: date)
+        resignFirstResponder()
     }
     
     @objc private func handleCancel() {
