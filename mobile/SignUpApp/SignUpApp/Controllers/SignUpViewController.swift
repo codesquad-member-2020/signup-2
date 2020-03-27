@@ -26,7 +26,12 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupNavigation()
         setupTextFieldDelegate()
+    }
+    
+    private func setupNavigation() {
+        navigationController?.navigationBar.isHidden = true
     }
     
     private func setupTextFieldDelegate() {

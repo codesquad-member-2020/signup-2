@@ -14,6 +14,7 @@ class PersonalInfoViewController: UIViewController {
     @IBOutlet weak var genderSegmentedControl: GenderSegmentedControl!
     @IBOutlet weak var emailTextField: EmailTextField!
     @IBOutlet weak var phoneTextField: PhoneTextField!
+    @IBOutlet weak var previousButton: PersonalInfoButton!
     @IBOutlet weak var nextButton: PersonalInfoNextButton!
     
     let emailTextFieldDelegate = EmailTextFieldDelegate()
@@ -24,7 +25,12 @@ class PersonalInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupNavigation()
         setupTextFieldDelegate()
+    }
+    
+    private func setupNavigation() {
+        navigationController?.navigationBar.isHidden = true
     }
     
     private func setupTextFieldDelegate() {
