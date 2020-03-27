@@ -3,6 +3,7 @@ import axios from "axios";
 import compose from "../../util/compose";
 import { API } from "../../constants/constants";
 import makeFormBody from "../../util/formBody";
+import { VALIDATION_MESSAGE } from "../../constants/constants";
 
 const hasFulfilledRequirements = e => {
   e.preventDefault();
@@ -39,7 +40,7 @@ const hasSelectedSex = previousResult => {
 
 const registerUser = async previousResult => {
   if (!previousResult) {
-    alert("확인해주세요!");
+    alert(VALIDATION_MESSAGE.BEFORE_SUBMIT.CHECK_AGAIN);
     return;
   }
   const data = {
@@ -66,7 +67,7 @@ const registerUser = async previousResult => {
     });
     window.location.href = "/login.html";
   } catch (error) {
-    alert("회원 가입에 실패했습니다.");
+    alert(VALIDATION_MESSAGE.AFTER_SUBMIT.FAILED);
   }
 };
 

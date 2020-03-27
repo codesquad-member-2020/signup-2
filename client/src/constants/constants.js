@@ -36,6 +36,15 @@ export const VALIDATION_MESSAGE = {
     UNDER_FIFTEEN: "만 15세 이상만 가입할 수 있습니다.",
     OVER_NINTYNINE: "만 99세 이하만 가입할 수 있습니다.",
     SAFE_BIRTHDATE: "가입해도 좋은 생일입니다."
+  },
+  BEFORE_SUBMIT: {
+    CHECK_AGAIN: "입력 항목을 다시 확인해주세요."
+  },
+  AFTER_SUBMIT: {
+    FAILED: "회원 가입에 실패했습니다."
+  },
+  LOGIN: {
+    FAILED: "로그인에 실패했습니다."
   }
 };
 

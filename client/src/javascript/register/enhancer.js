@@ -1,5 +1,5 @@
 import { SELECT_ELEMENT } from "../../util/selector";
-import { CSS_ID_CLASS } from "../../constants/constants";
+import { CSS_ID_CLASS, VALIDATION_MESSAGE } from "../../constants/constants";
 import { idExist } from "../validation/idValidation";
 
 const { REGISTER } = CSS_ID_CLASS;
@@ -13,8 +13,8 @@ export const idExistInServer = async e => {
   const id = target.value;
   const isValid = await idExist(id);
   const message = isValid
-    ? "사용해도 괜찮은 아이디입니다."
-    : "이미 존재하는 아이디입니다.";
+    ? VALIDATION_MESSAGE.SAFE_ID
+    : VALIDATION_MESSAGE.EXISTING_ID;
   handleTestResult(target, isValid, message);
 };
 
