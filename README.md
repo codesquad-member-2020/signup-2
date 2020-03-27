@@ -65,3 +65,11 @@ https://shrouded-tor-36901.herokuapp.com/
 > 회고
 
 - 회고는 금요일에 진행한다.
+
+<br>
+
+---
+
+> iOS 데모 영상
+
+<img src="https://github.com/codesquad-memeber-2020/signup-2/tree/master/mobile/assets/iOS-demo.gif" width="320">
