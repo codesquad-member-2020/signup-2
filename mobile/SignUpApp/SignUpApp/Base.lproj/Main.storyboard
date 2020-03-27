@@ -314,7 +314,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE5-lL-YPU">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE5-lL-YPU" customClass="PersonalInfoNextButton" customModule="SignUpApp" customModuleProvider="target">
                                 <rect key="frame" x="286" y="448.5" width="88" height="34"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -326,7 +326,7 @@
                                     <color key="titleColor" name="KeyColor"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRs-Nr-yvp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRs-Nr-yvp" customClass="PersonalInfoButton" customModule="SignUpApp" customModuleProvider="target">
                                 <rect key="frame" x="40" y="448.5" width="88" height="34"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -361,6 +361,7 @@
                         <outlet property="birthDateTextField" destination="xMf-Id-H7W" id="Ywz-fG-T7i"/>
                         <outlet property="emailTextField" destination="nAz-wM-QfY" id="seL-vR-F4p"/>
                         <outlet property="genderSegmentedControl" destination="aXb-Hj-HQd" id="EMl-v7-Wqt"/>
+                        <outlet property="nextButton" destination="EE5-lL-YPU" id="b31-OX-Ui6"/>
                         <outlet property="phoneTextField" destination="ogL-g3-rZT" id="jYJ-LB-rhL"/>
                     </connections>
                 </viewController>

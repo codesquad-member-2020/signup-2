@@ -14,6 +14,7 @@ class PersonalInfoViewController: UIViewController {
     @IBOutlet weak var genderSegmentedControl: GenderSegmentedControl!
     @IBOutlet weak var emailTextField: EmailTextField!
     @IBOutlet weak var phoneTextField: PhoneTextField!
+    @IBOutlet weak var nextButton: PersonalInfoNextButton!
     
     let emailTextFieldDelegate = EmailTextFieldDelegate()
     let phoneTextFieldDelegate = PhoneTextFieldDelegate()

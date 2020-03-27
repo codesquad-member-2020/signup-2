@@ -19,6 +19,8 @@
 		3834BFDD242DD8C3001C0C4A /* EmailStatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3834BFDC242DD8C3001C0C4A /* EmailStatusLabel.swift */; };
 		3834BFDF242DD955001C0C4A /* PhoneStatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3834BFDE242DD955001C0C4A /* PhoneStatusLabel.swift */; };
 		3834BFE2242DDA14001C0C4A /* GenderSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3834BFE1242DDA14001C0C4A /* GenderSegmentedControl.swift */; };
+		3834BFE4242DDE1E001C0C4A /* PersonalInfoNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3834BFE3242DDE1E001C0C4A /* PersonalInfoNextButton.swift */; };
+		3834BFE6242DDEEA001C0C4A /* PersonalInfoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3834BFE5242DDEEA001C0C4A /* PersonalInfoButton.swift */; };
 		3840F5AC242A402F007D3156 /* SignUpStatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840F5AB242A402F007D3156 /* SignUpStatusLabel.swift */; };
 		385E1224242B338D00AAFD1B /* SignUpNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385E1223242B338D00AAFD1B /* SignUpNextButton.swift */; };
 		386B137C24286F4B00E0EA29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B137B24286F4B00E0EA29 /* AppDelegate.swift */; };
@@ -58,6 +60,8 @@
 		3834BFDC242DD8C3001C0C4A /* EmailStatusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailStatusLabel.swift; sourceTree = "<group>"; };
 		3834BFDE242DD955001C0C4A /* PhoneStatusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneStatusLabel.swift; sourceTree = "<group>"; };
 		3834BFE1242DDA14001C0C4A /* GenderSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSegmentedControl.swift; sourceTree = "<group>"; };
+		3834BFE3242DDE1E001C0C4A /* PersonalInfoNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoNextButton.swift; sourceTree = "<group>"; };
+		3834BFE5242DDEEA001C0C4A /* PersonalInfoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoButton.swift; sourceTree = "<group>"; };
 		3840F5AB242A402F007D3156 /* SignUpStatusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStatusLabel.swift; sourceTree = "<group>"; };
 		385E1223242B338D00AAFD1B /* SignUpNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNextButton.swift; sourceTree = "<group>"; };
 		386B137824286F4B00E0EA29 /* SignUpApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUpApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +106,8 @@
 			children = (
 				3834BFD3242DD255001C0C4A /* PersonalInfoLabels */,
 				3834BFD1242DD1DA001C0C4A /* PersonalInfoTextFields */,
+				3834BFE3242DDE1E001C0C4A /* PersonalInfoNextButton.swift */,
+				3834BFE5242DDEEA001C0C4A /* PersonalInfoButton.swift */,
 			);
 			path = PersonalInfo;
 			sourceTree = "<group>";
@@ -346,6 +352,7 @@
 				386B137E24286F4B00E0EA29 /* SceneDelegate.swift in Sources */,
 				3834BFD7242DD29B001C0C4A /* PhoneTextFieldDelegate.swift in Sources */,
 				38BAEAD6242D1A7F0065A602 /* IdentificationStatusLabel.swift in Sources */,
+				3834BFE4242DDE1E001C0C4A /* PersonalInfoNextButton.swift in Sources */,
 				3840F5AC242A402F007D3156 /* SignUpStatusLabel.swift in Sources */,
 				38E3E5162428AEDE00B4CA36 /* SignUpTextField.swift in Sources */,
 				38BAEAE2242D9B790065A602 /* PasswordReconfirmationStatusLabel.swift in Sources */,
@@ -353,6 +360,7 @@
 				38BAEACB242D0FCF0065A602 /* IdentificationTextFieldDelegate.swift in Sources */,
 				38BAEAD1242D101E0065A602 /* NameTextFieldDelegate.swift in Sources */,
 				38BAEADA242D944F0065A602 /* PasswordTextField.swift in Sources */,
+				3834BFE6242DDEEA001C0C4A /* PersonalInfoButton.swift in Sources */,
 				3834BFCC242DD0BD001C0C4A /* EmailTextField.swift in Sources */,
 				3834BFDD242DD8C3001C0C4A /* EmailStatusLabel.swift in Sources */,
 				385E1224242B338D00AAFD1B /* SignUpNextButton.swift in Sources */,

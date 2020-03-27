@@ -55,7 +55,19 @@ class BirthDateTextField: UITextField {
         configure()
     }
     
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.insetBy(dx: 8, dy: 0)
+    }
+    
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return bounds.insetBy(dx: 8, dy: 0)
+    }
+    
     private func configure() {
+        layer.borderColor = UIColor.darkGray.cgColor
+        layer.borderWidth = 1.5
+        layer.cornerRadius = 0
+        borderStyle = .none
         setupDatePicker()
         let selectButton = generateButton(title: "선택", titleColor: UIColor(named: "KeyColor"), weight: .heavy, selector: #selector(handleSelect))
         let cancelButton = generateButton(title: "취소", titleColor: nil, weight: .semibold, selector: #selector(handleCancel))

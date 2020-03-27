@@ -28,7 +28,7 @@ class GenderSegmentedControl: UISegmentedControl {
     
     @objc private func handleGenderChange(segmentedControl: UISegmentedControl) {
         let index = segmentedControl.selectedSegmentIndex
-        let gender: String = index == 0 ? "female" : "male"
-        personalInfoViewModel?.gender = gender
+        let isMale: Bool = index == 1
+        personalInfoViewModel?.isMale = isMale
     }
 }

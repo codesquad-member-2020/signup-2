@@ -15,7 +15,7 @@ class PersonalInfoViewModel {
     static let PhoneStatusDidChangeNotification = NSNotification.Name("PhoneStatusDidChangeNotification")
     
     var birthDate: Date? { didSet { checkValidation() } }
-    var gender: String = "female" { didSet { checkValidation() } }
+    var isMale: Bool = false { didSet { checkValidation() } }
     var email: String = "" {
         didSet {
             isEmailValid = evaluate(text: email, with: emailRegex)
