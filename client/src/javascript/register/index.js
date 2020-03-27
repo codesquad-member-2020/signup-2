@@ -12,7 +12,7 @@ import {
   withTestAndSelector,
   withTestAndSelectors,
   idExistInServer
-} from "./enhanceTest";
+} from "./enhancer";
 import {
   hideModal,
   popUpModal,

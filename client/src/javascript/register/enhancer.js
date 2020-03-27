@@ -52,9 +52,9 @@ function handleTestResult(target, result, message) {
 export function withTest(test) {
   return function(event) {
     const { target } = event;
-    const [result, message] = test(target.value);
+    const { passedValidation, message } = test(target.value);
 
-    handleTestResult(target, result, message);
+    handleTestResult(target, passedValidation, message);
   };
 }
 
@@ -63,9 +63,9 @@ export function withTestAndSelector(test) {
     return function(event) {
       const { target } = event;
       const compareValue = SELECT_ELEMENT(selector).value;
-      const [result, message] = test(target.value, compareValue);
+      const { passedValidation, message } = test(target.value, compareValue);
 
-      handleTestResult(target, result, message);
+      handleTestResult(target, passedValidation, message);
     };
   };
 }
@@ -78,8 +78,8 @@ export function withTestAndSelectors(test) {
         const selectorValueArray = selectorArray.map(
           selector => SELECT_ELEMENT(selector).value
         );
-        const [result, message] = test(selectorValueArray);
-        handleTestResult(target, result, message);
+        const { passedValidation, message } = test(selectorValueArray);
+        handleTestResult(target, passedValidation, message);
       };
     };
   };

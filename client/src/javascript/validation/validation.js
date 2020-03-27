@@ -1,44 +1,47 @@
 import { VALIDATION_MESSAGE, VALIDATION_REG } from "../../constants/constants";
-import composedPasswordTest from "./passwordTest";
-import composedMobilePhoneTest from "./mobilePhoneTest";
-import composedBirthdateTest from "./birthdateTest";
+import composedPasswordValidation from "./passwordValidation";
+import composedMobilePhoneValidation from "./mobilePhoneValidation";
+import composedBirthdateValidation from "./birthdateValidation";
+import makePipelineObject from "../../util/validationPipeline";
 
 const { ID, EMAIL, PASSWORD_CHECK } = VALIDATION_MESSAGE;
 
 export const passwordTest = password => {
-  const [_, result, message] = composedPasswordTest(password);
-  return [result, message];
+  const { passedValidation, message } = composedPasswordValidation(password);
+  return { passedValidation, message };
 };
 
 export const passwordCheckTest = (password, targetPassword) => {
   if (password === targetPassword) {
-    return [true, PASSWORD_CHECK.SAME_PASSWORD];
+    return makePipelineObject(password, true, PASSWORD_CHECK.SAME_PASSWORD);
   }
-  return [false, PASSWORD_CHECK.NOT_SAME_PASSWORD];
+  return makePipelineObject(password, false, PASSWORD_CHECK.NOT_SAME_PASSWORD);
 };
 
 export const idTest = id => {
   const result = VALIDATION_REG.ID_RULE.test(id);
   if (result) {
-    return [true, ID.SAFE_ID];
+    return makePipelineObject(id, true, ID.SAFE_ID);
   }
-  return [false, ID.NOT_ALLOWED_ID];
+  return makePipelineObject(id, false, ID.NOT_ALLOWED_ID);
 };
 
 export const emailTest = email => {
   const result = VALIDATION_REG.EMAIL_RULE.test(email);
   if (result) {
-    return [true, EMAIL.SAFE_EMAIL];
+    return makePipelineObject(email, true, EMAIL.SAFE_EMAIL);
   }
-  return [false, EMAIL.NOT_VALID_EMAIL];
+  return makePipelineObject(email, false, EMAIL.NOT_VALID_EMAIL);
 };
 
 export const mobilePhoneNumberTest = mobilePhoneNumber => {
-  const [_, result, message] = composedMobilePhoneTest(mobilePhoneNumber);
-  return [result, message];
+  const { passedValidation, message } = composedMobilePhoneValidation(
+    mobilePhoneNumber
+  );
+  return { passedValidation, message };
 };
 
 export const birthdateTest = birthdate => {
-  const [_, result, message] = composedBirthdateTest(birthdate);
-  return [result, message];
+  const { passedValidation, message } = composedBirthdateValidation(birthdate);
+  return { passedValidation, message };
 };
