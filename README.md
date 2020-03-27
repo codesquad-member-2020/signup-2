@@ -72,4 +72,4 @@ https://shrouded-tor-36901.herokuapp.com/
 
 > iOS 데모 영상
 
-<img src="https://github.com/codesquad-memeber-2020/signup-2/tree/master/mobile/assets/iOS-demo.gif" width="320">
+<img src="https://github.com/codesquad-memeber-2020/signup-2/blob/master/mobile/assets/iOS-demo.gif" width="320">
