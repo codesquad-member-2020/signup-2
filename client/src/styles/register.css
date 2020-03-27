@@ -1,0 +1,236 @@
+body {
+  background-color: #f8f9fa;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+#register {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  color: #0175d6;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 3rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#buttons > button {
+  width: 48%;
+  height: 3rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+form label {
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+#birthday {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+input,
+select {
+  box-sizing: border-box;
+  height: 1.8rem;
+}
+
+input {
+  padding: 0.7rem;
+}
+
+#birthday select {
+  width: 30%;
+}
+
+#birthday input {
+  max-width: 30%;
+}
+
+.warning,
+.safe {
+  font-size: 0.9rem;
+}
+
+.warning {
+  color: #fd3434;
+}
+
+.safe {
+  color: #45bb43;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+span {
+  display: block;
+}
+
+form span {
+  margin-top: 0.4rem;
+  font-weight: 0.8rem;
+}
+
+#agreement {
+  display: flex;
+  flex-direction: row;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-decoration: underline;
+}
+
+#agreement span {
+  cursor: pointer;
+}
+
+.center {
+  left: 50%;
+  transform: translate(-50%, 30vh);
+}
+
+#modal {
+  position: fixed;
+  border: 1px solid #000000;
+  background-color: #f4f4f4;
+  top: 0;
+  width: 30vw;
+  height: 40vh;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.modal-content {
+  height: 70%;
+}
+
+#privacy-agreement {
+  display: block;
+  overflow-y: scroll;
+  height: 60%;
+  text-align: justify;
+  border: 1px solid #000000;
+  padding: 0.8rem;
+}
+
+#modal-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#modal-button button {
+  width: 30%;
+  height: 2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.invalid {
+  background-color: rgba(1, 117, 214, 0.5);
+  color: #ffffff;
+}
+
+.valid {
+  background-color: rgba(1, 117, 214, 1);
+  color: #ffffff;
+}
+
+.modal-close {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 98%;
+  cursor: pointer;
+}
+
+.modal-title {
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+.dim {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+body {
+  background: #eee;
+}
+.interest-container {
+  width: 100%;
+}
+.tag-container {
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding: 6px;
+  overflow-x: scroll;
+}
+.tag-container .tag {
+  height: 20px;
+  margin: 5px;
+  padding: 5px 6px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  color: #333;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 1px 1px #fff;
+  cursor: default;
+}
+.tag i {
+  font-size: 16px;
+  color: #666;
+  margin-left: 5px;
+}
+.tag-container input {
+  padding: 5px;
+  font-size: 16px;
+  height: 40px;
+  border: 0;
+  outline: none;
+  font-family: "Rubik";
+  color: #333;
+  flex: 1;
+}
