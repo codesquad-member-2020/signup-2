@@ -326,6 +326,9 @@
                                 <state key="normal" title=" 다음 " image="chevron.right.circle.fill" catalog="system">
                                     <color key="titleColor" name="KeyColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="RdJ-ts-3h7" kind="modal" id="aaz-m1-WoR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRs-Nr-yvp" customClass="PersonalInfoButton" customModule="SignUpApp" customModuleProvider="target">
                                 <rect key="frame" x="40" y="492.5" width="88" height="34"/>
@@ -370,6 +373,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7X-pi-OcJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1797.1014492753625" y="134.59821428571428"/>
+        </scene>
+        <!--Terms View Controller-->
+        <scene sceneID="DRw-FW-e1D">
+            <objects>
+                <viewController id="RdJ-ts-3h7" customClass="TermsViewController" customModule="SignUpApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ceO-jZ-PaP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개인정보 수집 및 이용에 대한 안내" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvP-Gb-mYk">
+                                <rect key="frame" x="40" y="24" width="334" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="k4Y-1n-Hi1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WZw-dI-RqE">
+                                <rect key="frame" x="40" y="88" width="334" height="520"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1ky-hV-VdP" firstAttribute="trailing" secondItem="WZw-dI-RqE" secondAttribute="trailing" constant="40" id="2gg-bU-kXA"/>
+                            <constraint firstItem="1ky-hV-VdP" firstAttribute="trailing" secondItem="CvP-Gb-mYk" secondAttribute="trailing" constant="40" id="Fa8-U2-k8L"/>
+                            <constraint firstItem="1ky-hV-VdP" firstAttribute="bottom" secondItem="WZw-dI-RqE" secondAttribute="bottom" constant="200" id="Gh1-hI-Ur7"/>
+                            <constraint firstItem="WZw-dI-RqE" firstAttribute="top" secondItem="CvP-Gb-mYk" secondAttribute="bottom" constant="32" id="hPv-uw-2HI"/>
+                            <constraint firstItem="CvP-Gb-mYk" firstAttribute="top" secondItem="1ky-hV-VdP" secondAttribute="top" constant="24" id="oWj-cx-y7b"/>
+                            <constraint firstItem="WZw-dI-RqE" firstAttribute="leading" secondItem="1ky-hV-VdP" secondAttribute="leading" constant="40" id="vJU-lg-Tsk"/>
+                            <constraint firstItem="CvP-Gb-mYk" firstAttribute="leading" secondItem="1ky-hV-VdP" secondAttribute="leading" constant="40" id="x46-xY-iVW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1ky-hV-VdP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MWw-z1-h7K"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oWW-b8-EAq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2681" y="136"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DOC-en-3Fe">
