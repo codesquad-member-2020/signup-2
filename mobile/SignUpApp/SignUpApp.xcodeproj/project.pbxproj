@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3834BFC5242DAC6E001C0C4A /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3834BFC4242DAC6E001C0C4A /* PersonalInfoViewController.swift */; };
 		3834BFC8242DC98B001C0C4A /* BirthDateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3834BFC7242DC98B001C0C4A /* BirthDateTextField.swift */; };
+		3834BFCA242DCF51001C0C4A /* PersonalInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3834BFC9242DCF51001C0C4A /* PersonalInfoViewModel.swift */; };
 		3840F5AC242A402F007D3156 /* SignUpStatusLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3840F5AB242A402F007D3156 /* SignUpStatusLabel.swift */; };
 		385E1224242B338D00AAFD1B /* SignUpNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385E1223242B338D00AAFD1B /* SignUpNextButton.swift */; };
 		386B137C24286F4B00E0EA29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386B137B24286F4B00E0EA29 /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		3834BFC4242DAC6E001C0C4A /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 		3834BFC7242DC98B001C0C4A /* BirthDateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthDateTextField.swift; sourceTree = "<group>"; };
+		3834BFC9242DCF51001C0C4A /* PersonalInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewModel.swift; sourceTree = "<group>"; };
 		3840F5AB242A402F007D3156 /* SignUpStatusLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStatusLabel.swift; sourceTree = "<group>"; };
 		385E1223242B338D00AAFD1B /* SignUpNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNextButton.swift; sourceTree = "<group>"; };
 		386B137824286F4B00E0EA29 /* SignUpApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUpApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				38BAEABD242C80FC0065A602 /* SignUpViewModel.swift */,
+				3834BFC9242DCF51001C0C4A /* PersonalInfoViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			files = (
 				38BAEAD3242D11000065A602 /* User.swift in Sources */,
 				38BAEAC8242CAEE90065A602 /* NetworkManager.swift in Sources */,
+				3834BFCA242DCF51001C0C4A /* PersonalInfoViewModel.swift in Sources */,
 				3834BFC8242DC98B001C0C4A /* BirthDateTextField.swift in Sources */,
 				38BAEABE242C80FC0065A602 /* SignUpViewModel.swift in Sources */,
 				38BAEAD8242D20EA0065A602 /* IdentificationTextField.swift in Sources */,
