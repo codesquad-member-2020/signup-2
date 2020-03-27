@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/login.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <title>로그인</title>
+  </head>
+  <body>
+    <div class="login">
+      <header>
+        <img
+          src="/assets/codesquad-logo.png"
+          alt="codesquad"
+          height="32"
+          width="32"
+        />
+        <p>
+          코드스쿼드
+        </p>
+      </header>
+      <form id="login">
+        <input id="id" name="id" placeholder="아이디" />
+        <input
+          id="password"
+          name="password"
+          placeholder="비밀번호"
+          type="password"
+        />
+        <button type="submit">로그인</button>
+      </form>
+      <button class="register-button"><a href="register.html">회원가입</a></button>
+    </div>
+    <script src="/dist/login_bundle.js"></script>
+  </body>
+</html>

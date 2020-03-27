@@ -1,0 +1,35 @@
+{
+  "name": "signup-2",
+  "version": "1.0.0",
+  "description": "codesquad signup project",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack -w",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sangwon21/signup-2.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sangwon21/signup-2/issues"
+  },
+  "homepage": "https://github.com/sangwon21/signup-2#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "css-loader": "^3.4.2",
+    "jest": "^25.1.0",
+    "moment": "^2.24.0",
+    "regenerator-runtime": "^0.13.5",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-loader": "^8.1.0"
+  }
+}
