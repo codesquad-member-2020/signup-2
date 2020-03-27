@@ -10,9 +10,11 @@ import UIKit
 
 class TermsViewController: UIViewController {
     
+    @IBOutlet weak var termTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        setupUI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -26,5 +28,11 @@ class TermsViewController: UIViewController {
         }))
         
         self.present(actionSheet, animated: true, completion: nil)
+    }
+    
+    private func setupUI() {
+        view.alpha = 0.95
+        termTextView.layer.borderColor = UIColor.darkGray.cgColor
+        termTextView.layer.borderWidth = 1
     }
 }
