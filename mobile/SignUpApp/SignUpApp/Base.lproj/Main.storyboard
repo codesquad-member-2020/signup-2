@@ -327,7 +327,7 @@
                                     <color key="titleColor" name="KeyColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="RdJ-ts-3h7" kind="modal" id="aaz-m1-WoR"/>
+                                    <action selector="nextButtonTapped:" destination="6Vi-Qr-tRD" eventType="touchUpInside" id="616-ZI-XT2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRs-Nr-yvp" customClass="PersonalInfoButton" customModule="SignUpApp" customModuleProvider="target">
@@ -341,6 +341,9 @@
                                 <state key="normal" title=" 이전" image="chevron.left.circle.fill" catalog="system">
                                     <color key="titleColor" name="KeyColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="previousButtonTapped:" destination="6Vi-Qr-tRD" eventType="touchUpInside" id="Bf4-Uw-lwI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" name="GrayBackground"/>
@@ -365,9 +368,7 @@
                         <outlet property="birthDateTextField" destination="xMf-Id-H7W" id="Ywz-fG-T7i"/>
                         <outlet property="emailTextField" destination="nAz-wM-QfY" id="seL-vR-F4p"/>
                         <outlet property="genderSegmentedControl" destination="aXb-Hj-HQd" id="EMl-v7-Wqt"/>
-                        <outlet property="nextButton" destination="EE5-lL-YPU" id="b31-OX-Ui6"/>
                         <outlet property="phoneTextField" destination="ogL-g3-rZT" id="jYJ-LB-rhL"/>
-                        <outlet property="previousButton" destination="VRs-Nr-yvp" id="JYp-bc-N2w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7X-pi-OcJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -377,13 +378,13 @@
         <!--Terms View Controller-->
         <scene sceneID="DRw-FW-e1D">
             <objects>
-                <viewController id="RdJ-ts-3h7" customClass="TermsViewController" customModule="SignUpApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Terms" id="RdJ-ts-3h7" customClass="TermsViewController" customModule="SignUpApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ceO-jZ-PaP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="개인정보 수집 및 이용에 대한 안내" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvP-Gb-mYk">
-                                <rect key="frame" x="40" y="24" width="334" height="32"/>
+                                <rect key="frame" x="40" y="68" width="334" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="k4Y-1n-Hi1"/>
                                 </constraints>
@@ -392,7 +393,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WZw-dI-RqE" customClass="TermsTextView" customModule="SignUpApp" customModuleProvider="target">
-                                <rect key="frame" x="44" y="88" width="326" height="560"/>
+                                <rect key="frame" x="44" y="132" width="326" height="570"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <mutableString key="text">정보통신망법 규정에 따라 코드스쿼드에 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간을 안내 드리오니 자세히 읽은 후 동의하여 주시기 바랍니다.   1. 수집하는 개인정보 이용자는 회원가입을 하지 않아도 대부분의 코드스쿼드 서비스를 회원과 동일하게 이용할 수 있습니다. 이용자가 개인화 혹은 회원제 서비스를 이용하기 위해 회원가입을 할 경우, 코드스쿼드는 서비스 이용을 위해 필요한 최소한의 개인정보를 수집합니다. 회원가입 시점에 코드스쿼드가 이용자로부터 수집하는 개인정보는 아래와 같습니다.  - 회원 가입 시에 ‘아이디, 비밀번호, 이름, 생년월일, 성별, 휴대전화번호’를 필수항목으로 수집합니다.  서비스 이용 과정에서 이용자로부터 수집하는 개인정보는 아래와 같습니다. 코드스쿼드 내의 개별 서비스 이용, 이벤트 응모 및 경품 신청 과정에서 해당 서비스의 이용자에 한해 추가 개인정보 수집이 발생할 수 있습니다. 추가로 개인정보를 수집할 경우에는 해당 개인정보 수집 시점에서 이용자에게 ‘수집하는 개인정보 항목, 개인정보의 수집 및 이용목적, 개인정보의 보관기간’에 대해 안내 드리고 동의를 받습니다.  2. 수집하는 개인정보 이용자는 회원가입을 하지 않아도 대부분의 코드스쿼드 서비스를 회원과 동일하게 이용할 수 있습니다. 이용자가 개인화 혹은 회원제 서비스를 이용하기 위해 회원가입을 할 경우, 코드스쿼드는 서비스 이용을 위해 필요한 최소한의 개인정보를 수집합니다. 회원가입 시점에 코드스쿼드가 이용자로부터 수집하는 개인정보는 아래와 같습니다.  - 회원 가입 시에 ‘아이디, 비밀번호, 이름, 생년월일, 성별, 휴대전화번호’를 필수항목으로 수집합니다.  서비스 이용 과정에서 이용자로부터 수집하는 개인정보는 아래와 같습니다. 코드스쿼드 내의 개별 서비스 이용, 이벤트 응모 및 경품 신청 과정에서 해당 서비스의 이용자에 한해 추가 개인정보 수집이 발생할 수 있습니다. 추가로 개인정보를 수집할 경우에는 해당 개인정보 수집 시점에서 이용자에게 ‘수집하는 개인정보 항목, 개인정보의 수집 및 이용목적, 개인정보의 보관기간’에 대해 안내 드리고 동의를 받습니다.</mutableString>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
