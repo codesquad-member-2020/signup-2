@@ -10,18 +10,27 @@ import UIKit
 
 class TermsViewController: UIViewController {
     
-    @IBOutlet weak var termTextView: UITextView!
-    
+    @IBOutlet weak var termsTextView: TermsTextView!
     let actionSheetController: UIAlertController = {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         return actionSheet
     }()
+    var isActionSheetDisplayed = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
         setupUI()
+        setupTextViewHandler()
         setupActionSheetHandlers()
+    }
+    
+    private func setupTextViewHandler() {
+        termsTextView.didScrollToBottomHandler = {
+            guard !self.isActionSheetDisplayed else { return }
+            self.isActionSheetDisplayed = true
+            self.present(self.actionSheetController, animated: true)
+        }
     }
     
     private func setupActionSheetHandlers() {
@@ -37,18 +46,13 @@ class TermsViewController: UIViewController {
         actionSheetController.addAction(cancelAction)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        present(actionSheetController, animated: true, completion: nil)
-    }
-    
     private func didSelectAction(hasAgreed: Bool) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true) {
+            self.isActionSheetDisplayed = false
+        }
     }
     
     private func setupUI() {
         view.alpha = 0.95
-        termTextView.layer.borderColor = UIColor.darkGray.cgColor
-        termTextView.layer.borderWidth = 1
     }
 }

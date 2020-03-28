@@ -30,6 +30,7 @@
 		386B138324286F4B00E0EA29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386B138124286F4B00E0EA29 /* Main.storyboard */; };
 		386B138524286F4C00E0EA29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 386B138424286F4C00E0EA29 /* Assets.xcassets */; };
 		386B138824286F4C00E0EA29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386B138624286F4C00E0EA29 /* LaunchScreen.storyboard */; };
+		386BDD0A242E6C540059A110 /* TermsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386BDD09242E6C540059A110 /* TermsTextView.swift */; };
 		38BAEABE242C80FC0065A602 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEABD242C80FC0065A602 /* SignUpViewModel.swift */; };
 		38BAEAC8242CAEE90065A602 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEAC7242CAEE90065A602 /* NetworkManager.swift */; };
 		38BAEACB242D0FCF0065A602 /* IdentificationTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEACA242D0FCF0065A602 /* IdentificationTextFieldDelegate.swift */; };
@@ -74,6 +75,7 @@
 		386B138424286F4C00E0EA29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		386B138724286F4C00E0EA29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		386B138924286F4C00E0EA29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		386BDD09242E6C540059A110 /* TermsTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsTextView.swift; sourceTree = "<group>"; };
 		38BAEABD242C80FC0065A602 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		38BAEAC7242CAEE90065A602 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		38BAEACA242D0FCF0065A602 /* IdentificationTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentificationTextFieldDelegate.swift; sourceTree = "<group>"; };
@@ -201,10 +203,19 @@
 		386B1393242873DB00E0EA29 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				386BDD08242E6C3A0059A110 /* Terms */,
 				3834BFC6242DC972001C0C4A /* PersonalInfo */,
 				389A39D02429089D00207331 /* SignUp */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		386BDD08242E6C3A0059A110 /* Terms */ = {
+			isa = PBXGroup;
+			children = (
+				386BDD09242E6C540059A110 /* TermsTextView.swift */,
+			);
+			path = Terms;
 			sourceTree = "<group>";
 		};
 		3873AD10242A30BF0089F9E8 /* SignUpTextFields */ = {
@@ -352,6 +363,7 @@
 				3834BFDB242DD898001C0C4A /* PersonalInfoLabel.swift in Sources */,
 				38BAEAE0242D9ABD0065A602 /* PasswordStatusLabel.swift in Sources */,
 				38BAEAE4242D9BB60065A602 /* NameStatusLabel.swift in Sources */,
+				386BDD0A242E6C540059A110 /* TermsTextView.swift in Sources */,
 				386B137E24286F4B00E0EA29 /* SceneDelegate.swift in Sources */,
 				3834BFD7242DD29B001C0C4A /* PhoneTextFieldDelegate.swift in Sources */,
 				38BAEAD6242D1A7F0065A602 /* IdentificationStatusLabel.swift in Sources */,
