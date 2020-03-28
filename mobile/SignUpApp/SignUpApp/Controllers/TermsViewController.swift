@@ -8,23 +8,57 @@
 
 import UIKit
 
+protocol TermsViewControllerDelegate {
+    func didSelectAction(hasAgreed: Bool)
+}
+
 class TermsViewController: UIViewController {
+    
+    var delegate: TermsViewControllerDelegate?
+    
+    @IBOutlet weak var termsTextView: TermsTextView!
+    let actionSheetController: UIAlertController = {
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        return actionSheet
+    }()
+    var isActionSheetDisplayed = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        setupUI()
+        setupTextViewHandler()
+        setupActionSheetHandlers()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        actionSheet.addAction(UIAlertAction(title: "동의", style: .default, handler: { (_) in
-            self.dismiss(animated: true, completion: nil)
-        }))
-        actionSheet.addAction(UIAlertAction(title: "취소", style: .cancel, handler: { (_) in
-            self.dismiss(animated: true, completion: nil)
-        }))
+    private func setupTextViewHandler() {
+        termsTextView.didScrollToBottomHandler = {
+            guard !self.isActionSheetDisplayed else { return }
+            self.isActionSheetDisplayed = true
+            self.present(self.actionSheetController, animated: true)
+        }
+    }
+    
+    private func setupActionSheetHandlers() {
+        let agreeAction = UIAlertAction(title: "동의", style: .default) { (_) in
+            self.dismiss(animated: true) {
+                self.isActionSheetDisplayed = false
+                self.delegate?.didSelectAction(hasAgreed: true)
+            }
+        }
+        agreeAction.setValue(UIColor(named: "KeyColor"), forKey: "titleTextColor")
         
-        self.present(actionSheet, animated: true, completion: nil)
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: { (_) in
+            self.dismiss(animated: true) {
+                self.isActionSheetDisplayed = false
+                self.delegate?.didSelectAction(hasAgreed: false)
+            }
+        })
+        actionSheetController.addAction(agreeAction)
+        actionSheetController.addAction(cancelAction)
+    }
+    
+    private func setupUI() {
+        view.alpha = 0.95
     }
 }

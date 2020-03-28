@@ -14,8 +14,6 @@ class PersonalInfoViewController: UIViewController {
     @IBOutlet weak var genderSegmentedControl: GenderSegmentedControl!
     @IBOutlet weak var emailTextField: EmailTextField!
     @IBOutlet weak var phoneTextField: PhoneTextField!
-    @IBOutlet weak var previousButton: PersonalInfoButton!
-    @IBOutlet weak var nextButton: PersonalInfoNextButton!
     
     let emailTextFieldDelegate = EmailTextFieldDelegate()
     let phoneTextFieldDelegate = PhoneTextFieldDelegate()
@@ -44,5 +42,25 @@ class PersonalInfoViewController: UIViewController {
         genderSegmentedControl.personalInfoViewModel = personalInfoViewModel
         emailTextFieldDelegate.personalInfoViewModel = personalInfoViewModel
         phoneTextFieldDelegate.personalInfoViewModel = personalInfoViewModel
+    }
+    
+    // MARK:- Button Actions
+    @IBAction func previousButtonTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        guard let termsViewController = self.storyboard?.instantiateViewController(withIdentifier: "Terms") as? TermsViewController else { return }
+        termsViewController.delegate = self
+        present(termsViewController, animated: true, completion: nil)
+    }
+}
+
+extension PersonalInfoViewController: TermsViewControllerDelegate {
+    func didSelectAction(hasAgreed: Bool) {
+        guard hasAgreed else { return }
+        let mockViewController = UIViewController()
+        mockViewController.view.backgroundColor = .orange
+        navigationController?.pushViewController(mockViewController, animated: true)
     }
 }
