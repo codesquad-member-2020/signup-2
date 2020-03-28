@@ -22,14 +22,13 @@ class InterestViewController:  UIViewController {
         super.viewDidLoad()
         
         setupCollectionView()
-        interestViewModel.didFinishAddingInterest = {
+        interestViewModel.didFinishChangingInterests = {
             self.collectionView.reloadData()
             self.interestInputTextField.text = ""
         }
         interestInputTextField.didFinishTextingInterest = { (text) in
             self.interestViewModel.addInterest(text)
         }
-        
         interestCollectionViewDataSource.interestViewModel = interestViewModel
         interestCollectionViewDelegate.interestViewModel = interestViewModel
     }

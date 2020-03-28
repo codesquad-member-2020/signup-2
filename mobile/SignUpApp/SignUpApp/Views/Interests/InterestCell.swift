@@ -26,8 +26,6 @@ class InterestCell: UICollectionViewCell {
     
     let interestLabel: UILabel = {
         let label = UILabel()
-        label.text = "안녕하세"
-        
         label.textColor = .black
         label.font = .systemFont(ofSize: 16, weight: .bold)
         return label
@@ -41,13 +39,8 @@ class InterestCell: UICollectionViewCell {
         button.imageView?.tintColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
         button.widthAnchor.constraint(equalTo: button.heightAnchor, multiplier: 1).isActive = true
-        button.addTarget(self, action: #selector(handleDelete), for: .touchUpInside)
         return button
     }()
-    
-    @objc func handleDelete() {
-        // action
-    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)

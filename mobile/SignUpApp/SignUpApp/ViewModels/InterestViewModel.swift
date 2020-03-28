@@ -10,15 +10,19 @@ import UIKit
 
 class InterestViewModel {
     
-    var didFinishAddingInterest: (() -> ())?
+    var didFinishChangingInterests: (() -> ())?
     
     var interests: [String] = [] {
         didSet {
-            didFinishAddingInterest?()
+            didFinishChangingInterests?()
         }
     }
     
     func addInterest(_ interest: String) {
         interests.append(interest)
+    }
+    
+    func deleteInterest(at index: Int) {
+        interests.remove(at: index)
     }
 }
