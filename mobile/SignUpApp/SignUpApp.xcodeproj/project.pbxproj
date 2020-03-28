@@ -32,6 +32,8 @@
 		386B138824286F4C00E0EA29 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386B138624286F4C00E0EA29 /* LaunchScreen.storyboard */; };
 		386BDD0A242E6C540059A110 /* TermsTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386BDD09242E6C540059A110 /* TermsTextView.swift */; };
 		386BDD0D242F295E0059A110 /* InterestTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386BDD0C242F295D0059A110 /* InterestTextField.swift */; };
+		386BDD0F242F2EE50059A110 /* InterestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386BDD0E242F2EE50059A110 /* InterestCell.swift */; };
+		386BDD11242F30B60059A110 /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386BDD10242F30B60059A110 /* InterestViewController.swift */; };
 		38BAEABE242C80FC0065A602 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEABD242C80FC0065A602 /* SignUpViewModel.swift */; };
 		38BAEAC8242CAEE90065A602 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEAC7242CAEE90065A602 /* NetworkManager.swift */; };
 		38BAEACB242D0FCF0065A602 /* IdentificationTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEACA242D0FCF0065A602 /* IdentificationTextFieldDelegate.swift */; };
@@ -78,6 +80,8 @@
 		386B138924286F4C00E0EA29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		386BDD09242E6C540059A110 /* TermsTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsTextView.swift; sourceTree = "<group>"; };
 		386BDD0C242F295D0059A110 /* InterestTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestTextField.swift; sourceTree = "<group>"; };
+		386BDD0E242F2EE50059A110 /* InterestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestCell.swift; sourceTree = "<group>"; };
+		386BDD10242F30B60059A110 /* InterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
 		38BAEABD242C80FC0065A602 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		38BAEAC7242CAEE90065A602 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		38BAEACA242D0FCF0065A602 /* IdentificationTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentificationTextFieldDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 				386B137F24286F4B00E0EA29 /* SignUpViewController.swift */,
 				3834BFC4242DAC6E001C0C4A /* PersonalInfoViewController.swift */,
 				3834BFE7242DE290001C0C4A /* TermsViewController.swift */,
+				386BDD10242F30B60059A110 /* InterestViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -225,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				386BDD0C242F295D0059A110 /* InterestTextField.swift */,
+				386BDD0E242F2EE50059A110 /* InterestCell.swift */,
 			);
 			path = Interests;
 			sourceTree = "<group>";
@@ -367,6 +373,7 @@
 				3834BFC5242DAC6E001C0C4A /* PersonalInfoViewController.swift in Sources */,
 				386B138024286F4B00E0EA29 /* SignUpViewController.swift in Sources */,
 				38BAEACF242D10020065A602 /* PasswordReconfirmationTextFieldDelegate.swift in Sources */,
+				386BDD11242F30B60059A110 /* InterestViewController.swift in Sources */,
 				3834BFD0242DD1CB001C0C4A /* PhoneTextField.swift in Sources */,
 				38BAEACD242D0FE70065A602 /* PasswordTextFieldDelegate.swift in Sources */,
 				3834BFE2242DDA14001C0C4A /* GenderSegmentedControl.swift in Sources */,
@@ -386,6 +393,7 @@
 				38BAEAE2242D9B790065A602 /* PasswordReconfirmationStatusLabel.swift in Sources */,
 				38BAEADE242D96A20065A602 /* NameTextField.swift in Sources */,
 				38BAEACB242D0FCF0065A602 /* IdentificationTextFieldDelegate.swift in Sources */,
+				386BDD0F242F2EE50059A110 /* InterestCell.swift in Sources */,
 				38BAEAD1242D101E0065A602 /* NameTextFieldDelegate.swift in Sources */,
 				38BAEADA242D944F0065A602 /* PasswordTextField.swift in Sources */,
 				3834BFE6242DDEEA001C0C4A /* PersonalInfoButton.swift in Sources */,
