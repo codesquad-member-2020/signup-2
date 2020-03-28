@@ -8,7 +8,13 @@
 
 import UIKit
 
+protocol TermsViewControllerDelegate {
+    func didSelectAction(hasAgreed: Bool)
+}
+
 class TermsViewController: UIViewController {
+    
+    var delegate: TermsViewControllerDelegate?
     
     @IBOutlet weak var termsTextView: TermsTextView!
     let actionSheetController: UIAlertController = {
@@ -35,21 +41,21 @@ class TermsViewController: UIViewController {
     
     private func setupActionSheetHandlers() {
         let agreeAction = UIAlertAction(title: "동의", style: .default) { (_) in
-            self.didSelectAction(hasAgreed: true)
+            self.dismiss(animated: true) {
+                self.isActionSheetDisplayed = false
+                self.delegate?.didSelectAction(hasAgreed: true)
+            }
         }
         agreeAction.setValue(UIColor(named: "KeyColor"), forKey: "titleTextColor")
         
         let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: { (_) in
-            self.didSelectAction(hasAgreed: false)
+            self.dismiss(animated: true) {
+                self.isActionSheetDisplayed = false
+                self.delegate?.didSelectAction(hasAgreed: false)
+            }
         })
         actionSheetController.addAction(agreeAction)
         actionSheetController.addAction(cancelAction)
-    }
-    
-    private func didSelectAction(hasAgreed: Bool) {
-        self.dismiss(animated: true) {
-            self.isActionSheetDisplayed = false
-        }
     }
     
     private func setupUI() {
