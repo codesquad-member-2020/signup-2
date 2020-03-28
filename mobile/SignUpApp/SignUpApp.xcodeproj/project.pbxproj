@@ -34,6 +34,9 @@
 		386BDD0D242F295E0059A110 /* InterestTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386BDD0C242F295D0059A110 /* InterestTextField.swift */; };
 		386BDD0F242F2EE50059A110 /* InterestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386BDD0E242F2EE50059A110 /* InterestCell.swift */; };
 		386BDD11242F30B60059A110 /* InterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386BDD10242F30B60059A110 /* InterestViewController.swift */; };
+		386BDD13242F675A0059A110 /* InterestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386BDD12242F675A0059A110 /* InterestViewModel.swift */; };
+		386BDD15242F6C3D0059A110 /* InterestCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386BDD14242F6C3D0059A110 /* InterestCollectionViewDelegate.swift */; };
+		386BDD17242F6C770059A110 /* InterestCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386BDD16242F6C770059A110 /* InterestCollectionViewDataSource.swift */; };
 		38BAEABE242C80FC0065A602 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEABD242C80FC0065A602 /* SignUpViewModel.swift */; };
 		38BAEAC8242CAEE90065A602 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEAC7242CAEE90065A602 /* NetworkManager.swift */; };
 		38BAEACB242D0FCF0065A602 /* IdentificationTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEACA242D0FCF0065A602 /* IdentificationTextFieldDelegate.swift */; };
@@ -82,6 +85,9 @@
 		386BDD0C242F295D0059A110 /* InterestTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestTextField.swift; sourceTree = "<group>"; };
 		386BDD0E242F2EE50059A110 /* InterestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestCell.swift; sourceTree = "<group>"; };
 		386BDD10242F30B60059A110 /* InterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestViewController.swift; sourceTree = "<group>"; };
+		386BDD12242F675A0059A110 /* InterestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestViewModel.swift; sourceTree = "<group>"; };
+		386BDD14242F6C3D0059A110 /* InterestCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		386BDD16242F6C770059A110 /* InterestCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		38BAEABD242C80FC0065A602 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		38BAEAC7242CAEE90065A602 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		38BAEACA242D0FCF0065A602 /* IdentificationTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentificationTextFieldDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +209,7 @@
 			children = (
 				38BAEAC7242CAEE90065A602 /* NetworkManager.swift */,
 				38BAEAD2242D11000065A602 /* User.swift */,
+				386BDD16242F6C770059A110 /* InterestCollectionViewDataSource.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -231,6 +238,7 @@
 			children = (
 				386BDD0C242F295D0059A110 /* InterestTextField.swift */,
 				386BDD0E242F2EE50059A110 /* InterestCell.swift */,
+				386BDD14242F6C3D0059A110 /* InterestCollectionViewDelegate.swift */,
 			);
 			path = Interests;
 			sourceTree = "<group>";
@@ -263,6 +271,7 @@
 			children = (
 				38BAEABD242C80FC0065A602 /* SignUpViewModel.swift */,
 				3834BFC9242DCF51001C0C4A /* PersonalInfoViewModel.swift */,
+				386BDD12242F675A0059A110 /* InterestViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -367,6 +376,7 @@
 				3834BFCA242DCF51001C0C4A /* PersonalInfoViewModel.swift in Sources */,
 				3834BFDF242DD955001C0C4A /* PhoneStatusLabel.swift in Sources */,
 				3834BFC8242DC98B001C0C4A /* BirthDateTextField.swift in Sources */,
+				386BDD13242F675A0059A110 /* InterestViewModel.swift in Sources */,
 				38BAEABE242C80FC0065A602 /* SignUpViewModel.swift in Sources */,
 				38BAEAD8242D20EA0065A602 /* IdentificationTextField.swift in Sources */,
 				3834BFD5242DD28D001C0C4A /* EmailTextFieldDelegate.swift in Sources */,
@@ -377,6 +387,7 @@
 				3834BFD0242DD1CB001C0C4A /* PhoneTextField.swift in Sources */,
 				38BAEACD242D0FE70065A602 /* PasswordTextFieldDelegate.swift in Sources */,
 				3834BFE2242DDA14001C0C4A /* GenderSegmentedControl.swift in Sources */,
+				386BDD15242F6C3D0059A110 /* InterestCollectionViewDelegate.swift in Sources */,
 				386B137C24286F4B00E0EA29 /* AppDelegate.swift in Sources */,
 				3834BFDB242DD898001C0C4A /* PersonalInfoLabel.swift in Sources */,
 				38BAEAE0242D9ABD0065A602 /* PasswordStatusLabel.swift in Sources */,
@@ -397,6 +408,7 @@
 				38BAEAD1242D101E0065A602 /* NameTextFieldDelegate.swift in Sources */,
 				38BAEADA242D944F0065A602 /* PasswordTextField.swift in Sources */,
 				3834BFE6242DDEEA001C0C4A /* PersonalInfoButton.swift in Sources */,
+				386BDD17242F6C770059A110 /* InterestCollectionViewDataSource.swift in Sources */,
 				3834BFCC242DD0BD001C0C4A /* EmailTextField.swift in Sources */,
 				3834BFDD242DD8C3001C0C4A /* EmailStatusLabel.swift in Sources */,
 				385E1224242B338D00AAFD1B /* SignUpNextButton.swift in Sources */,

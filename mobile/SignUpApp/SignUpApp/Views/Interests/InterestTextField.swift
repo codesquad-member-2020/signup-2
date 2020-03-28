@@ -24,6 +24,8 @@ class InterestTextField: UITextField {
         }
     }
     
+    var didFinishTextingInterest: ((String) -> Void)?
+    
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.insetBy(dx: 8, dy: 0)
     }
@@ -53,6 +55,8 @@ class InterestTextField: UITextField {
 
 extension InterestTextField: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        let text = textField.text ?? ""
+        didFinishTextingInterest?(text)
         return true
     }
 }

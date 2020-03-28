@@ -416,7 +416,7 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VEw-Vv-Hex">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VEw-Vv-Hex">
                                 <rect key="frame" x="40" y="226" width="334" height="120"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -492,6 +492,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="VEw-Vv-Hex" id="JcS-ab-EN2"/>
+                        <outlet property="interestInputTextField" destination="syE-Ok-3aW" id="jul-k8-rde"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mrw-97-PQw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
