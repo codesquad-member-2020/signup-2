@@ -24,6 +24,11 @@ class InterestViewController:  UIViewController {
         
         setupCollectionView()
         setupViewModel()
+        setupNavigationController()
+    }
+    
+    private func setupNavigationController() {
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
     
     private func setupViewModel() {
