@@ -12,6 +12,7 @@ class InterestViewController:  UIViewController {
     
     @IBOutlet weak var interestInputTextField: InterestTextField!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var nextButton: PersonalInfoNextButton!
     
     let interestViewModel = InterestViewModel()
     
@@ -22,9 +23,10 @@ class InterestViewController:  UIViewController {
         super.viewDidLoad()
         
         setupCollectionView()
-        interestViewModel.didFinishChangingInterests = {
+        interestViewModel.didFinishChangingInterests = { isValid in
             self.collectionView.reloadData()
             self.interestInputTextField.text = ""
+            self.nextButton.isValid = isValid
         }
         interestInputTextField.didFinishTextingInterest = { (text) in
             self.interestViewModel.addInterest(text)
@@ -37,5 +39,13 @@ class InterestViewController:  UIViewController {
         collectionView.dataSource = interestCollectionViewDataSource
         collectionView.delegate = interestCollectionViewDelegate
         collectionView.semanticContentAttribute = .forceLeftToRight
+    }
+    
+    @IBAction func previousButtonTapped(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        print("회원가입!")
     }
 }

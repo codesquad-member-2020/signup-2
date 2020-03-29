@@ -451,7 +451,7 @@
                                     <color key="titleColor" name="KeyColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="nextButtonTapped:" destination="6Vi-Qr-tRD" eventType="touchUpInside" id="1Zr-nN-Yty"/>
+                                    <action selector="nextButtonTapped:" destination="LXM-lV-uZ2" eventType="touchUpInside" id="eGR-OL-9Ld"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXq-Ei-oFy" customClass="PersonalInfoButton" customModule="SignUpApp" customModuleProvider="target">
@@ -466,7 +466,7 @@
                                     <color key="titleColor" name="KeyColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="previousButtonTapped:" destination="6Vi-Qr-tRD" eventType="touchUpInside" id="grO-7A-hFD"/>
+                                    <action selector="previousButtonTapped:" destination="LXM-lV-uZ2" eventType="touchUpInside" id="61W-jp-Xdw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -493,6 +493,7 @@
                     <connections>
                         <outlet property="collectionView" destination="VEw-Vv-Hex" id="JcS-ab-EN2"/>
                         <outlet property="interestInputTextField" destination="syE-Ok-3aW" id="jul-k8-rde"/>
+                        <outlet property="nextButton" destination="SjU-pQ-c5O" id="QzU-jc-ZCF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mrw-97-PQw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

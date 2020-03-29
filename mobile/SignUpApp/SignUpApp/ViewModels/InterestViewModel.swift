@@ -10,11 +10,11 @@ import UIKit
 
 class InterestViewModel {
     
-    var didFinishChangingInterests: (() -> ())?
+    var didFinishChangingInterests: ((Bool) -> ())?
     
     var interests: [String] = [] {
         didSet {
-            didFinishChangingInterests?()
+            didFinishChangingInterests?(interests.count >= 3)
         }
     }
     
