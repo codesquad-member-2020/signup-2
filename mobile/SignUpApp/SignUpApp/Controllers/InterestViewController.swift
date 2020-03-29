@@ -23,6 +23,15 @@ class InterestViewController:  UIViewController {
         super.viewDidLoad()
         
         setupCollectionView()
+        setupViewModel()
+        setupNavigationController()
+    }
+    
+    private func setupNavigationController() {
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+    }
+    
+    private func setupViewModel() {
         interestViewModel.didFinishChangingInterests = { isValid in
             self.collectionView.reloadData()
             self.interestInputTextField.text = ""
