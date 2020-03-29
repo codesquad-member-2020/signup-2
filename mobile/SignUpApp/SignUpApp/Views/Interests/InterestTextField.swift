@@ -56,6 +56,7 @@ class InterestTextField: UITextField {
 extension InterestTextField: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         let text = textField.text ?? ""
+        guard text != "" else { return true }
         didFinishTextingInterest?(text)
         return true
     }
