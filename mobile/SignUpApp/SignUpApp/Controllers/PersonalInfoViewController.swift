@@ -59,8 +59,7 @@ class PersonalInfoViewController: UIViewController {
 extension PersonalInfoViewController: TermsViewControllerDelegate {
     func didSelectAction(hasAgreed: Bool) {
         guard hasAgreed else { return }
-        let mockViewController = UIViewController()
-        mockViewController.view.backgroundColor = .orange
-        navigationController?.pushViewController(mockViewController, animated: true)
+        guard let interestViewController = self.storyboard?.instantiateViewController(identifier: "Interest") as? InterestViewController else { return }
+        navigationController?.pushViewController(interestViewController, animated: true)
     }
 }

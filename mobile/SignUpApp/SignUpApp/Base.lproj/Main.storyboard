@@ -379,7 +379,7 @@
         <!--Interest View Controller-->
         <scene sceneID="2XQ-oa-YOb">
             <objects>
-                <viewController id="LXM-lV-uZ2" customClass="InterestViewController" customModule="SignUpApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Interest" id="LXM-lV-uZ2" customClass="InterestViewController" customModule="SignUpApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hqG-sA-EyV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
