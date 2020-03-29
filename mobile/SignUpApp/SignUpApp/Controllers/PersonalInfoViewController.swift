@@ -23,12 +23,13 @@ class PersonalInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupNavigation()
+        setupNavigationController()
         setupTextFieldDelegate()
     }
     
-    private func setupNavigation() {
+    private func setupNavigationController() {
         navigationController?.navigationBar.isHidden = true
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
     
     private func setupTextFieldDelegate() {
