@@ -46,6 +46,6 @@ class InterestViewController:  UIViewController {
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
-        print("회원가입!")
+        
     }
 }
