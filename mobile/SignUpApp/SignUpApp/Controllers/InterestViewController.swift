@@ -10,6 +10,8 @@ import UIKit
 
 class InterestViewController:  UIViewController {
     
+    static let identifier = "Interest"
+    
     @IBOutlet weak var interestInputTextField: InterestTextField!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var nextButton: PersonalInfoNextButton!

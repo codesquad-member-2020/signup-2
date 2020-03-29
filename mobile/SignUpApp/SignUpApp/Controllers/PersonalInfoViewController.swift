@@ -51,7 +51,7 @@ class PersonalInfoViewController: UIViewController {
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
-        guard let termsViewController = self.storyboard?.instantiateViewController(withIdentifier: "Terms") as? TermsViewController else { return }
+        guard let termsViewController = self.storyboard?.instantiateViewController(withIdentifier: TermsViewController.identifier) as? TermsViewController else { return }
         termsViewController.delegate = self
         present(termsViewController, animated: true, completion: nil)
     }
@@ -60,7 +60,7 @@ class PersonalInfoViewController: UIViewController {
 extension PersonalInfoViewController: TermsViewControllerDelegate {
     func didSelectAction(hasAgreed: Bool) {
         guard hasAgreed else { return }
-        guard let interestViewController = self.storyboard?.instantiateViewController(identifier: "Interest") as? InterestViewController else { return }
+        guard let interestViewController = self.storyboard?.instantiateViewController(identifier: InterestViewController.identifier) as? InterestViewController else { return }
         navigationController?.pushViewController(interestViewController, animated: true)
     }
 }

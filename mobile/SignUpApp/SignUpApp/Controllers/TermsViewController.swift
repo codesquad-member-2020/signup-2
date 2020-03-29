@@ -14,6 +14,8 @@ protocol TermsViewControllerDelegate {
 
 class TermsViewController: UIViewController {
     
+    static let identifier = "Terms"
+    
     var delegate: TermsViewControllerDelegate?
     
     @IBOutlet weak var termsTextView: TermsTextView!
