@@ -37,6 +37,7 @@
 		386BDD13242F675A0059A110 /* InterestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386BDD12242F675A0059A110 /* InterestViewModel.swift */; };
 		386BDD15242F6C3D0059A110 /* InterestCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386BDD14242F6C3D0059A110 /* InterestCollectionViewDelegate.swift */; };
 		386BDD17242F6C770059A110 /* InterestCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386BDD16242F6C770059A110 /* InterestCollectionViewDataSource.swift */; };
+		38829F312430CAF50071302E /* InterestDeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38829F302430CAF50071302E /* InterestDeleteButton.swift */; };
 		38BAEABE242C80FC0065A602 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEABD242C80FC0065A602 /* SignUpViewModel.swift */; };
 		38BAEAC8242CAEE90065A602 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEAC7242CAEE90065A602 /* NetworkManager.swift */; };
 		38BAEACB242D0FCF0065A602 /* IdentificationTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BAEACA242D0FCF0065A602 /* IdentificationTextFieldDelegate.swift */; };
@@ -88,6 +89,7 @@
 		386BDD12242F675A0059A110 /* InterestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestViewModel.swift; sourceTree = "<group>"; };
 		386BDD14242F6C3D0059A110 /* InterestCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		386BDD16242F6C770059A110 /* InterestCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		38829F302430CAF50071302E /* InterestDeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestDeleteButton.swift; sourceTree = "<group>"; };
 		38BAEABD242C80FC0065A602 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		38BAEAC7242CAEE90065A602 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		38BAEACA242D0FCF0065A602 /* IdentificationTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentificationTextFieldDelegate.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				386BDD0C242F295D0059A110 /* InterestTextField.swift */,
 				386BDD0E242F2EE50059A110 /* InterestCell.swift */,
 				386BDD14242F6C3D0059A110 /* InterestCollectionViewDelegate.swift */,
+				38829F302430CAF50071302E /* InterestDeleteButton.swift */,
 			);
 			path = Interests;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				3834BFDB242DD898001C0C4A /* PersonalInfoLabel.swift in Sources */,
 				38BAEAE0242D9ABD0065A602 /* PasswordStatusLabel.swift in Sources */,
 				38BAEAE4242D9BB60065A602 /* NameStatusLabel.swift in Sources */,
+				38829F312430CAF50071302E /* InterestDeleteButton.swift in Sources */,
 				386BDD0A242E6C540059A110 /* TermsTextView.swift in Sources */,
 				386B137E24286F4B00E0EA29 /* SceneDelegate.swift in Sources */,
 				3834BFD7242DD29B001C0C4A /* PhoneTextFieldDelegate.swift in Sources */,

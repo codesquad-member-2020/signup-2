@@ -21,12 +21,13 @@ class InterestCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InterestCell", for: indexPath) as! InterestCell
         let interestsItem = interestViewModel?.interests
         cell.interest = interestsItem?[indexPath.item] ?? ""
-        cell.deleteButton.tag = indexPath.item
+        cell.setButtonIndex(indexPath.item)
         cell.deleteButton.addTarget(self, action: #selector(handleDelete), for: .touchUpInside)
         return cell
     }
     
     @objc func handleDelete(button: UIButton) {
-        interestViewModel?.deleteInterest(at: button.tag)
+        let deleteButton = button as! InterestDeleteButton
+        interestViewModel?.deleteInterest(at: deleteButton.index)
     }
 }

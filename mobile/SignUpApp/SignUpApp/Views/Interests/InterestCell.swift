@@ -31,8 +31,8 @@ class InterestCell: UICollectionViewCell {
         return label
     }()
     
-    let deleteButton: UIButton = {
-        let button = UIButton(type: .system)
+    let deleteButton: InterestDeleteButton = {
+        let button = InterestDeleteButton(type: .system)
         let image = UIImage(named: "xmark.circle.fill")
         button.setImage(image?.withRenderingMode(.alwaysOriginal), for: .normal)
         button.imageView?.contentMode = .scaleAspectFill
@@ -41,6 +41,10 @@ class InterestCell: UICollectionViewCell {
         button.widthAnchor.constraint(equalTo: button.heightAnchor, multiplier: 1).isActive = true
         return button
     }()
+    
+    func setButtonIndex(_ index: Int) {
+        deleteButton.setIndex(index)
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
