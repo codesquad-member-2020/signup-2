@@ -23,6 +23,10 @@ class InterestViewController:  UIViewController {
         super.viewDidLoad()
         
         setupCollectionView()
+        setupViewModel()
+    }
+    
+    private func setupViewModel() {
         interestViewModel.didFinishChangingInterests = { isValid in
             self.collectionView.reloadData()
             self.interestInputTextField.text = ""
