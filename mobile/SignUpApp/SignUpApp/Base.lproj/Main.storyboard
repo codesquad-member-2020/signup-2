@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -189,7 +190,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="135.9375"/>
+            <point key="canvasLocation" x="1091" y="136"/>
         </scene>
         <!--Personal Info View Controller-->
         <scene sceneID="2e8-qU-gyl">
@@ -375,6 +376,130 @@
             </objects>
             <point key="canvasLocation" x="1797.1014492753625" y="134.59821428571428"/>
         </scene>
+        <!--Interest View Controller-->
+        <scene sceneID="2XQ-oa-YOb">
+            <objects>
+                <viewController storyboardIdentifier="Interest" id="LXM-lV-uZ2" customClass="InterestViewController" customModule="SignUpApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hqG-sA-EyV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관심사" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1A-hT-G9Q">
+                                <rect key="frame" x="80" y="68" width="254" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="9jy-wF-4PV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                <color key="textColor" name="KeyColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4eC-ge-DfG">
+                                <rect key="frame" x="40" y="124" width="334" height="66"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관심사" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eb0-et-wtz">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="wGY-8G-iDJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="syE-Ok-3aW" customClass="InterestTextField" customModule="SignUpApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="334" height="38"/>
+                                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="ZYA-GT-Osi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="VEw-Vv-Hex">
+                                <rect key="frame" x="40" y="226" width="334" height="120"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="120" id="0uo-yX-AcF"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Bwp-yG-CQr">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="InterestCell" id="htJ-Iw-I3w" customClass="InterestCell" customModule="SignUpApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JBC-gH-GAp">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SjU-pQ-c5O" customClass="PersonalInfoNextButton" customModule="SignUpApp" customModuleProvider="target">
+                                <rect key="frame" x="286" y="463" width="88" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="0wa-2c-Kkg"/>
+                                    <constraint firstAttribute="width" constant="88" id="gtC-Qr-sGg"/>
+                                </constraints>
+                                <color key="tintColor" name="KeyColor"/>
+                                <state key="normal" title=" 다음 " image="chevron.right.circle.fill" catalog="system">
+                                    <color key="titleColor" name="KeyColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="LXM-lV-uZ2" eventType="touchUpInside" id="eGR-OL-9Ld"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXq-Ei-oFy" customClass="PersonalInfoButton" customModule="SignUpApp" customModuleProvider="target">
+                                <rect key="frame" x="40" y="463" width="88" height="34"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="88" id="F8L-cr-MLg"/>
+                                    <constraint firstAttribute="height" constant="34" id="VRL-V9-Bjc"/>
+                                </constraints>
+                                <color key="tintColor" name="KeyColor"/>
+                                <state key="normal" title=" 이전" image="chevron.left.circle.fill" catalog="system">
+                                    <color key="titleColor" name="KeyColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="previousButtonTapped:" destination="LXM-lV-uZ2" eventType="touchUpInside" id="61W-jp-Xdw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="GrayBackground"/>
+                        <constraints>
+                            <constraint firstItem="IXq-Ei-oFy" firstAttribute="centerY" secondItem="hqG-sA-EyV" secondAttribute="centerY" constant="32" id="6ev-0L-mT2"/>
+                            <constraint firstItem="SjU-pQ-c5O" firstAttribute="top" secondItem="IXq-Ei-oFy" secondAttribute="top" id="8js-gC-VSc"/>
+                            <constraint firstItem="4eC-ge-DfG" firstAttribute="leading" secondItem="5bZ-Zm-XnT" secondAttribute="leading" constant="40" id="JIf-y4-ZUh"/>
+                            <constraint firstItem="w1A-hT-G9Q" firstAttribute="top" secondItem="5bZ-Zm-XnT" secondAttribute="top" constant="24" id="OSL-tg-LVz"/>
+                            <constraint firstItem="5bZ-Zm-XnT" firstAttribute="trailing" secondItem="SjU-pQ-c5O" secondAttribute="trailing" constant="40" id="R7b-3v-9dk"/>
+                            <constraint firstItem="5bZ-Zm-XnT" firstAttribute="trailing" secondItem="4eC-ge-DfG" secondAttribute="trailing" constant="40" id="VLA-FH-Xj6"/>
+                            <constraint firstItem="IXq-Ei-oFy" firstAttribute="leading" secondItem="5bZ-Zm-XnT" secondAttribute="leading" constant="40" id="YgS-9m-12u"/>
+                            <constraint firstItem="5bZ-Zm-XnT" firstAttribute="trailing" secondItem="VEw-Vv-Hex" secondAttribute="trailing" constant="40" id="YrI-6s-oBf"/>
+                            <constraint firstItem="w1A-hT-G9Q" firstAttribute="centerX" secondItem="hqG-sA-EyV" secondAttribute="centerX" id="b6h-ru-ZUh"/>
+                            <constraint firstItem="w1A-hT-G9Q" firstAttribute="leading" secondItem="5bZ-Zm-XnT" secondAttribute="leading" constant="80" id="gMf-zj-TZD"/>
+                            <constraint firstItem="VEw-Vv-Hex" firstAttribute="leading" secondItem="5bZ-Zm-XnT" secondAttribute="leading" constant="40" id="hUF-HO-Hnh"/>
+                            <constraint firstItem="4eC-ge-DfG" firstAttribute="centerX" secondItem="hqG-sA-EyV" secondAttribute="centerX" id="ic0-ue-AtB"/>
+                            <constraint firstItem="VEw-Vv-Hex" firstAttribute="top" secondItem="4eC-ge-DfG" secondAttribute="bottom" constant="36" id="jcE-yx-5pT"/>
+                            <constraint firstItem="4eC-ge-DfG" firstAttribute="top" secondItem="w1A-hT-G9Q" secondAttribute="bottom" constant="24" id="lFv-cw-xCk"/>
+                            <constraint firstItem="5bZ-Zm-XnT" firstAttribute="trailing" secondItem="w1A-hT-G9Q" secondAttribute="trailing" constant="80" id="zgF-HD-9OL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5bZ-Zm-XnT"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="VEw-Vv-Hex" id="JcS-ab-EN2"/>
+                        <outlet property="interestInputTextField" destination="syE-Ok-3aW" id="jul-k8-rde"/>
+                        <outlet property="nextButton" destination="SjU-pQ-c5O" id="QzU-jc-ZCF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mrw-97-PQw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2586.9565217391305" y="135.9375"/>
+        </scene>
         <!--Terms View Controller-->
         <scene sceneID="DRw-FW-e1D">
             <objects>
@@ -395,7 +520,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WZw-dI-RqE" customClass="TermsTextView" customModule="SignUpApp" customModuleProvider="target">
                                 <rect key="frame" x="44" y="132" width="326" height="570"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">정보통신망법 규정에 따라 코드스쿼드에 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간을 안내 드리오니 자세히 읽은 후 동의하여 주시기 바랍니다.   1. 수집하는 개인정보 이용자는 회원가입을 하지 않아도 대부분의 코드스쿼드 서비스를 회원과 동일하게 이용할 수 있습니다. 이용자가 개인화 혹은 회원제 서비스를 이용하기 위해 회원가입을 할 경우, 코드스쿼드는 서비스 이용을 위해 필요한 최소한의 개인정보를 수집합니다. 회원가입 시점에 코드스쿼드가 이용자로부터 수집하는 개인정보는 아래와 같습니다.  - 회원 가입 시에 ‘아이디, 비밀번호, 이름, 생년월일, 성별, 휴대전화번호’를 필수항목으로 수집합니다.  서비스 이용 과정에서 이용자로부터 수집하는 개인정보는 아래와 같습니다. 코드스쿼드 내의 개별 서비스 이용, 이벤트 응모 및 경품 신청 과정에서 해당 서비스의 이용자에 한해 추가 개인정보 수집이 발생할 수 있습니다. 추가로 개인정보를 수집할 경우에는 해당 개인정보 수집 시점에서 이용자에게 ‘수집하는 개인정보 항목, 개인정보의 수집 및 이용목적, 개인정보의 보관기간’에 대해 안내 드리고 동의를 받습니다.  2. 수집하는 개인정보 이용자는 회원가입을 하지 않아도 대부분의 코드스쿼드 서비스를 회원과 동일하게 이용할 수 있습니다. 이용자가 개인화 혹은 회원제 서비스를 이용하기 위해 회원가입을 할 경우, 코드스쿼드는 서비스 이용을 위해 필요한 최소한의 개인정보를 수집합니다. 회원가입 시점에 코드스쿼드가 이용자로부터 수집하는 개인정보는 아래와 같습니다.  - 회원 가입 시에 ‘아이디, 비밀번호, 이름, 생년월일, 성별, 휴대전화번호’를 필수항목으로 수집합니다.  서비스 이용 과정에서 이용자로부터 수집하는 개인정보는 아래와 같습니다. 코드스쿼드 내의 개별 서비스 이용, 이벤트 응모 및 경품 신청 과정에서 해당 서비스의 이용자에 한해 추가 개인정보 수집이 발생할 수 있습니다. 추가로 개인정보를 수집할 경우에는 해당 개인정보 수집 시점에서 이용자에게 ‘수집하는 개인정보 항목, 개인정보의 수집 및 이용목적, 개인정보의 보관기간’에 대해 안내 드리고 동의를 받습니다.</mutableString>
+                                <string key="text">정보통신망법 규정에 따라 코드스쿼드에 회원가입 신청하시는 분께 수집하는 개인정보의 항목, 개인정보의 수집 및 이용목적, 개인정보의 보유 및 이용기간을 안내 드리오니 자세히 읽은 후 동의하여 주시기 바랍니다.   1. 수집하는 개인정보 이용자는 회원가입을 하지 않아도 대부분의 코드스쿼드 서비스를 회원과 동일하게 이용할 수 있습니다. 이용자가 개인화 혹은 회원제 서비스를 이용하기 위해 회원가입을 할 경우, 코드스쿼드는 서비스 이용을 위해 필요한 최소한의 개인정보를 수집합니다. 회원가입 시점에 코드스쿼드가 이용자로부터 수집하는 개인정보는 아래와 같습니다.  - 회원 가입 시에 ‘아이디, 비밀번호, 이름, 생년월일, 성별, 휴대전화번호’를 필수항목으로 수집합니다.  서비스 이용 과정에서 이용자로부터 수집하는 개인정보는 아래와 같습니다. 코드스쿼드 내의 개별 서비스 이용, 이벤트 응모 및 경품 신청 과정에서 해당 서비스의 이용자에 한해 추가 개인정보 수집이 발생할 수 있습니다. 추가로 개인정보를 수집할 경우에는 해당 개인정보 수집 시점에서 이용자에게 ‘수집하는 개인정보 항목, 개인정보의 수집 및 이용목적, 개인정보의 보관기간’에 대해 안내 드리고 동의를 받습니다.  2. 수집하는 개인정보 이용자는 회원가입을 하지 않아도 대부분의 코드스쿼드 서비스를 회원과 동일하게 이용할 수 있습니다. 이용자가 개인화 혹은 회원제 서비스를 이용하기 위해 회원가입을 할 경우, 코드스쿼드는 서비스 이용을 위해 필요한 최소한의 개인정보를 수집합니다. 회원가입 시점에 코드스쿼드가 이용자로부터 수집하는 개인정보는 아래와 같습니다.  - 회원 가입 시에 ‘아이디, 비밀번호, 이름, 생년월일, 성별, 휴대전화번호’를 필수항목으로 수집합니다.  서비스 이용 과정에서 이용자로부터 수집하는 개인정보는 아래와 같습니다. 코드스쿼드 내의 개별 서비스 이용, 이벤트 응모 및 경품 신청 과정에서 해당 서비스의 이용자에 한해 추가 개인정보 수집이 발생할 수 있습니다. 추가로 개인정보를 수집할 경우에는 해당 개인정보 수집 시점에서 이용자에게 ‘수집하는 개인정보 항목, 개인정보의 수집 및 이용목적, 개인정보의 보관기간’에 대해 안내 드리고 동의를 받습니다.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -420,7 +545,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oWW-b8-EAq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2681" y="136"/>
+            <point key="canvasLocation" x="1797" y="815"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DOC-en-3Fe">
@@ -438,7 +563,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02p-le-QfB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="135.9375"/>
+            <point key="canvasLocation" x="368" y="136"/>
         </scene>
     </scenes>
     <resources>
