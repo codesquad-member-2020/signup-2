@@ -12,7 +12,7 @@ class InterestViewModel {
     
     var didFinishChangingInterests: ((Bool) -> ())?
     
-    var interests: [String] = [] {
+    private(set) var interests: [String] = [] {
         didSet {
             didFinishChangingInterests?(interests.count >= 3)
         }
